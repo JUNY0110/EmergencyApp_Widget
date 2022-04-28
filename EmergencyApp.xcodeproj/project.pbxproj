@@ -1,0 +1,846 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */; };
+		9818D4952817DFA000E0CD42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4942817DFA000E0CD42 /* ContentView.swift */; };
+		9818D4972817DFA200E0CD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4962817DFA200E0CD42 /* Assets.xcassets */; };
+		9818D49A2817DFA200E0CD42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4992817DFA200E0CD42 /* Preview Assets.xcassets */; };
+		9818D4A42817DFA200E0CD42 /* EmergencyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4A32817DFA200E0CD42 /* EmergencyAppTests.swift */; };
+		9818D4AE2817DFA200E0CD42 /* EmergencyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4AD2817DFA200E0CD42 /* EmergencyAppUITests.swift */; };
+		9818D4B02817DFA200E0CD42 /* EmergencyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4AF2817DFA200E0CD42 /* EmergencyAppUITestsLaunchTests.swift */; };
+		9818D4C32817E00300E0CD42 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9818D4C22817E00300E0CD42 /* WidgetKit.framework */; };
+		9818D4C52817E00300E0CD42 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9818D4C42817E00300E0CD42 /* SwiftUI.framework */; };
+		9818D4C82817E00300E0CD42 /* EmergencyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4C72817E00300E0CD42 /* EmergencyWidget.swift */; };
+		9818D4CB2817E00400E0CD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4CA2817E00400E0CD42 /* Assets.xcassets */; };
+		9818D4CD2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4C92817E00300E0CD42 /* EmergencyWidget.intentdefinition */; };
+		9818D4CE2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4C92817E00300E0CD42 /* EmergencyWidget.intentdefinition */; };
+		9818D4D12817E00400E0CD42 /* EmergencyWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9818D4C02817E00200E0CD42 /* EmergencyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9818D4D72818103B00E0CD42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4D62818103B00E0CD42 /* MainView.swift */; };
+		9818D4DC28181C4300E0CD42 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4DB28181C4300E0CD42 /* DataList.swift */; };
+		9818D4DE28181CE800E0CD42 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4DD28181CE800E0CD42 /* SecondView.swift */; };
+		9818D4E028181DC500E0CD42 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4DF28181DC500E0CD42 /* ImagePicker.swift */; };
+		9818D4E228181F2C00E0CD42 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E128181F2C00E0CD42 /* CameraView.swift */; };
+		9818D4E42818EC8200E0CD42 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E32818EC8200E0CD42 /* ProfileImage.swift */; };
+		9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E52818ECB300E0CD42 /* NameField.swift */; };
+		9818D4E82818ECE200E0CD42 /* BirthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E72818ECE200E0CD42 /* BirthPicker.swift */; };
+		9818D4EA2818ED4A00E0CD42 /* BloodTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E92818ED4A00E0CD42 /* BloodTypePicker.swift */; };
+		9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4EB2818EDA200E0CD42 /* MedicalRecord.swift */; };
+		9818D4EE2818EDCE00E0CD42 /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4ED2818EDCE00E0CD42 /* EmergencyContact.swift */; };
+		9818D4F02818EDFA00E0CD42 /* SpareContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4EF2818EDFA00E0CD42 /* SpareContact.swift */; };
+		9818D4F3281916C300E0CD42 /* MedicineRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F2281916C300E0CD42 /* MedicineRecord.swift */; };
+		9818D4F528192BDF00E0CD42 /* EmergencyTabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */; };
+		9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F828192E1500E0CD42 /* LaunchScreen.swift */; };
+		9818D4FC2819A49700E0CD42 /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9818D4A02817DFA200E0CD42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9818D4872817DFA000E0CD42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9818D48E2817DFA000E0CD42;
+			remoteInfo = EmergencyApp;
+		};
+		9818D4AA2817DFA200E0CD42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9818D4872817DFA000E0CD42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9818D48E2817DFA000E0CD42;
+			remoteInfo = EmergencyApp;
+		};
+		9818D4CF2817E00400E0CD42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9818D4872817DFA000E0CD42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9818D4BF2817E00200E0CD42;
+			remoteInfo = EmergencyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9818D4D52817E00400E0CD42 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9818D4D12817E00400E0CD42 /* EmergencyWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9818D48F2817DFA000E0CD42 /* EmergencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAppApp.swift; sourceTree = "<group>"; };
+		9818D4942817DFA000E0CD42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9818D4962817DFA200E0CD42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9818D4992817DFA200E0CD42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9818D49F2817DFA200E0CD42 /* EmergencyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmergencyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9818D4A32817DFA200E0CD42 /* EmergencyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAppTests.swift; sourceTree = "<group>"; };
+		9818D4A92817DFA200E0CD42 /* EmergencyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmergencyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9818D4AD2817DFA200E0CD42 /* EmergencyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAppUITests.swift; sourceTree = "<group>"; };
+		9818D4AF2817DFA200E0CD42 /* EmergencyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9818D4C02817E00200E0CD42 /* EmergencyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmergencyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9818D4C22817E00300E0CD42 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9818D4C42817E00300E0CD42 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		9818D4C72817E00300E0CD42 /* EmergencyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyWidget.swift; sourceTree = "<group>"; };
+		9818D4C92817E00300E0CD42 /* EmergencyWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = EmergencyWidget.intentdefinition; sourceTree = "<group>"; };
+		9818D4CA2817E00400E0CD42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9818D4CC2817E00400E0CD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9818D4D62818103B00E0CD42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9818D4DB28181C4300E0CD42 /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
+		9818D4DD28181CE800E0CD42 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		9818D4DF28181DC500E0CD42 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		9818D4E128181F2C00E0CD42 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		9818D4E32818EC8200E0CD42 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		9818D4E52818ECB300E0CD42 /* NameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameField.swift; sourceTree = "<group>"; };
+		9818D4E72818ECE200E0CD42 /* BirthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthPicker.swift; sourceTree = "<group>"; };
+		9818D4E92818ED4A00E0CD42 /* BloodTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodTypePicker.swift; sourceTree = "<group>"; };
+		9818D4EB2818EDA200E0CD42 /* MedicalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecord.swift; sourceTree = "<group>"; };
+		9818D4ED2818EDCE00E0CD42 /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
+		9818D4EF2818EDFA00E0CD42 /* SpareContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpareContact.swift; sourceTree = "<group>"; };
+		9818D4F2281916C300E0CD42 /* MedicineRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineRecord.swift; sourceTree = "<group>"; };
+		9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyTabview.swift; sourceTree = "<group>"; };
+		9818D4F828192E1500E0CD42 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		9818D4FA2819A2AF00E0CD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9818D48C2817DFA000E0CD42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9818D49C2817DFA200E0CD42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9818D4A62817DFA200E0CD42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9818D4BD2817E00200E0CD42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9818D4C52817E00300E0CD42 /* SwiftUI.framework in Frameworks */,
+				9818D4C32817E00300E0CD42 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9818D4862817DFA000E0CD42 = {
+			isa = PBXGroup;
+			children = (
+				9818D4912817DFA000E0CD42 /* EmergencyApp */,
+				9818D4A22817DFA200E0CD42 /* EmergencyAppTests */,
+				9818D4AC2817DFA200E0CD42 /* EmergencyAppUITests */,
+				9818D4C62817E00300E0CD42 /* EmergencyWidget */,
+				9818D4C12817E00300E0CD42 /* Frameworks */,
+				9818D4902817DFA000E0CD42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9818D4902817DFA000E0CD42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9818D48F2817DFA000E0CD42 /* EmergencyApp.app */,
+				9818D49F2817DFA200E0CD42 /* EmergencyAppTests.xctest */,
+				9818D4A92817DFA200E0CD42 /* EmergencyAppUITests.xctest */,
+				9818D4C02817E00200E0CD42 /* EmergencyWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9818D4912817DFA000E0CD42 /* EmergencyApp */ = {
+			isa = PBXGroup;
+			children = (
+				9818D4FA2819A2AF00E0CD42 /* Info.plist */,
+				9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */,
+				9818D4942817DFA000E0CD42 /* ContentView.swift */,
+				9818D4F828192E1500E0CD42 /* LaunchScreen.swift */,
+				9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */,
+				9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */,
+				9818D4D62818103B00E0CD42 /* MainView.swift */,
+				9818D4DD28181CE800E0CD42 /* SecondView.swift */,
+				9818D4F12818EE8800E0CD42 /* MainComponent */,
+				9818D4DF28181DC500E0CD42 /* ImagePicker.swift */,
+				9818D4E128181F2C00E0CD42 /* CameraView.swift */,
+				9818D4DB28181C4300E0CD42 /* DataList.swift */,
+				9818D4962817DFA200E0CD42 /* Assets.xcassets */,
+				9818D4982817DFA200E0CD42 /* Preview Content */,
+			);
+			path = EmergencyApp;
+			sourceTree = "<group>";
+		};
+		9818D4982817DFA200E0CD42 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9818D4992817DFA200E0CD42 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9818D4A22817DFA200E0CD42 /* EmergencyAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				9818D4A32817DFA200E0CD42 /* EmergencyAppTests.swift */,
+			);
+			path = EmergencyAppTests;
+			sourceTree = "<group>";
+		};
+		9818D4AC2817DFA200E0CD42 /* EmergencyAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9818D4AD2817DFA200E0CD42 /* EmergencyAppUITests.swift */,
+				9818D4AF2817DFA200E0CD42 /* EmergencyAppUITestsLaunchTests.swift */,
+			);
+			path = EmergencyAppUITests;
+			sourceTree = "<group>";
+		};
+		9818D4C12817E00300E0CD42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9818D4C22817E00300E0CD42 /* WidgetKit.framework */,
+				9818D4C42817E00300E0CD42 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9818D4C62817E00300E0CD42 /* EmergencyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				9818D4C72817E00300E0CD42 /* EmergencyWidget.swift */,
+				9818D4C92817E00300E0CD42 /* EmergencyWidget.intentdefinition */,
+				9818D4CA2817E00400E0CD42 /* Assets.xcassets */,
+				9818D4CC2817E00400E0CD42 /* Info.plist */,
+			);
+			path = EmergencyWidget;
+			sourceTree = "<group>";
+		};
+		9818D4F12818EE8800E0CD42 /* MainComponent */ = {
+			isa = PBXGroup;
+			children = (
+				9818D4E32818EC8200E0CD42 /* ProfileImage.swift */,
+				9818D4E52818ECB300E0CD42 /* NameField.swift */,
+				9818D4E72818ECE200E0CD42 /* BirthPicker.swift */,
+				9818D4E92818ED4A00E0CD42 /* BloodTypePicker.swift */,
+				9818D4ED2818EDCE00E0CD42 /* EmergencyContact.swift */,
+				9818D4EF2818EDFA00E0CD42 /* SpareContact.swift */,
+				9818D4EB2818EDA200E0CD42 /* MedicalRecord.swift */,
+				9818D4F2281916C300E0CD42 /* MedicineRecord.swift */,
+			);
+			path = MainComponent;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9818D48E2817DFA000E0CD42 /* EmergencyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9818D4B32817DFA200E0CD42 /* Build configuration list for PBXNativeTarget "EmergencyApp" */;
+			buildPhases = (
+				9818D48B2817DFA000E0CD42 /* Sources */,
+				9818D48C2817DFA000E0CD42 /* Frameworks */,
+				9818D48D2817DFA000E0CD42 /* Resources */,
+				9818D4D52817E00400E0CD42 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9818D4D02817E00400E0CD42 /* PBXTargetDependency */,
+			);
+			name = EmergencyApp;
+			productName = EmergencyApp;
+			productReference = 9818D48F2817DFA000E0CD42 /* EmergencyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9818D49E2817DFA200E0CD42 /* EmergencyAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9818D4B62817DFA200E0CD42 /* Build configuration list for PBXNativeTarget "EmergencyAppTests" */;
+			buildPhases = (
+				9818D49B2817DFA200E0CD42 /* Sources */,
+				9818D49C2817DFA200E0CD42 /* Frameworks */,
+				9818D49D2817DFA200E0CD42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9818D4A12817DFA200E0CD42 /* PBXTargetDependency */,
+			);
+			name = EmergencyAppTests;
+			productName = EmergencyAppTests;
+			productReference = 9818D49F2817DFA200E0CD42 /* EmergencyAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9818D4A82817DFA200E0CD42 /* EmergencyAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9818D4B92817DFA200E0CD42 /* Build configuration list for PBXNativeTarget "EmergencyAppUITests" */;
+			buildPhases = (
+				9818D4A52817DFA200E0CD42 /* Sources */,
+				9818D4A62817DFA200E0CD42 /* Frameworks */,
+				9818D4A72817DFA200E0CD42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9818D4AB2817DFA200E0CD42 /* PBXTargetDependency */,
+			);
+			name = EmergencyAppUITests;
+			productName = EmergencyAppUITests;
+			productReference = 9818D4A92817DFA200E0CD42 /* EmergencyAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9818D4BF2817E00200E0CD42 /* EmergencyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9818D4D22817E00400E0CD42 /* Build configuration list for PBXNativeTarget "EmergencyWidgetExtension" */;
+			buildPhases = (
+				9818D4BC2817E00200E0CD42 /* Sources */,
+				9818D4BD2817E00200E0CD42 /* Frameworks */,
+				9818D4BE2817E00200E0CD42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmergencyWidgetExtension;
+			productName = EmergencyWidgetExtension;
+			productReference = 9818D4C02817E00200E0CD42 /* EmergencyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9818D4872817DFA000E0CD42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					9818D48E2817DFA000E0CD42 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					9818D49E2817DFA200E0CD42 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 9818D48E2817DFA000E0CD42;
+					};
+					9818D4A82817DFA200E0CD42 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 9818D48E2817DFA000E0CD42;
+					};
+					9818D4BF2817E00200E0CD42 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 9818D48A2817DFA000E0CD42 /* Build configuration list for PBXProject "EmergencyApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9818D4862817DFA000E0CD42;
+			productRefGroup = 9818D4902817DFA000E0CD42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9818D48E2817DFA000E0CD42 /* EmergencyApp */,
+				9818D49E2817DFA200E0CD42 /* EmergencyAppTests */,
+				9818D4A82817DFA200E0CD42 /* EmergencyAppUITests */,
+				9818D4BF2817E00200E0CD42 /* EmergencyWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9818D48D2817DFA000E0CD42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9818D49A2817DFA200E0CD42 /* Preview Assets.xcassets in Resources */,
+				9818D4972817DFA200E0CD42 /* Assets.xcassets in Resources */,
+				9818D4FC2819A49700E0CD42 /* LaunchScreen2.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9818D49D2817DFA200E0CD42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9818D4A72817DFA200E0CD42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9818D4BE2817E00200E0CD42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9818D4CB2817E00400E0CD42 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9818D48B2817DFA000E0CD42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9818D4DE28181CE800E0CD42 /* SecondView.swift in Sources */,
+				9818D4DC28181C4300E0CD42 /* DataList.swift in Sources */,
+				9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */,
+				9818D4CE2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */,
+				9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */,
+				9818D4E028181DC500E0CD42 /* ImagePicker.swift in Sources */,
+				9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */,
+				9818D4EE2818EDCE00E0CD42 /* EmergencyContact.swift in Sources */,
+				9818D4F528192BDF00E0CD42 /* EmergencyTabview.swift in Sources */,
+				9818D4E42818EC8200E0CD42 /* ProfileImage.swift in Sources */,
+				9818D4F02818EDFA00E0CD42 /* SpareContact.swift in Sources */,
+				9818D4952817DFA000E0CD42 /* ContentView.swift in Sources */,
+				9818D4D72818103B00E0CD42 /* MainView.swift in Sources */,
+				9818D4EA2818ED4A00E0CD42 /* BloodTypePicker.swift in Sources */,
+				9818D4F3281916C300E0CD42 /* MedicineRecord.swift in Sources */,
+				9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */,
+				9818D4E82818ECE200E0CD42 /* BirthPicker.swift in Sources */,
+				9818D4E228181F2C00E0CD42 /* CameraView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9818D49B2817DFA200E0CD42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9818D4A42817DFA200E0CD42 /* EmergencyAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9818D4A52817DFA200E0CD42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9818D4B02817DFA200E0CD42 /* EmergencyAppUITestsLaunchTests.swift in Sources */,
+				9818D4AE2817DFA200E0CD42 /* EmergencyAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9818D4BC2817E00200E0CD42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9818D4CD2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */,
+				9818D4C82817E00300E0CD42 /* EmergencyWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9818D4A12817DFA200E0CD42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9818D48E2817DFA000E0CD42 /* EmergencyApp */;
+			targetProxy = 9818D4A02817DFA200E0CD42 /* PBXContainerItemProxy */;
+		};
+		9818D4AB2817DFA200E0CD42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9818D48E2817DFA000E0CD42 /* EmergencyApp */;
+			targetProxy = 9818D4AA2817DFA200E0CD42 /* PBXContainerItemProxy */;
+		};
+		9818D4D02817E00400E0CD42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9818D4BF2817E00200E0CD42 /* EmergencyWidgetExtension */;
+			targetProxy = 9818D4CF2817E00400E0CD42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9818D4B12817DFA200E0CD42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9818D4B22817DFA200E0CD42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9818D4B42817DFA200E0CD42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmergencyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = N6LML762WM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmergencyApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera permission";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eddy.EmergencyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9818D4B52817DFA200E0CD42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmergencyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = N6LML762WM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmergencyApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera permission";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eddy.EmergencyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9818D4B72817DFA200E0CD42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N6LML762WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eddy.EmergencyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmergencyApp.app/EmergencyApp";
+			};
+			name = Debug;
+		};
+		9818D4B82817DFA200E0CD42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N6LML762WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eddy.EmergencyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmergencyApp.app/EmergencyApp";
+			};
+			name = Release;
+		};
+		9818D4BA2817DFA200E0CD42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N6LML762WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eddy.EmergencyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmergencyApp;
+			};
+			name = Debug;
+		};
+		9818D4BB2817DFA200E0CD42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N6LML762WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eddy.EmergencyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmergencyApp;
+			};
+			name = Release;
+		};
+		9818D4D32817E00400E0CD42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N6LML762WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmergencyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EmergencyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eddy.EmergencyApp.EmergencyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9818D4D42817E00400E0CD42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N6LML762WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmergencyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EmergencyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eddy.EmergencyApp.EmergencyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9818D48A2817DFA000E0CD42 /* Build configuration list for PBXProject "EmergencyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9818D4B12817DFA200E0CD42 /* Debug */,
+				9818D4B22817DFA200E0CD42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9818D4B32817DFA200E0CD42 /* Build configuration list for PBXNativeTarget "EmergencyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9818D4B42817DFA200E0CD42 /* Debug */,
+				9818D4B52817DFA200E0CD42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9818D4B62817DFA200E0CD42 /* Build configuration list for PBXNativeTarget "EmergencyAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9818D4B72817DFA200E0CD42 /* Debug */,
+				9818D4B82817DFA200E0CD42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9818D4B92817DFA200E0CD42 /* Build configuration list for PBXNativeTarget "EmergencyAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9818D4BA2817DFA200E0CD42 /* Debug */,
+				9818D4BB2817DFA200E0CD42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9818D4D22817E00400E0CD42 /* Build configuration list for PBXNativeTarget "EmergencyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9818D4D32817E00400E0CD42 /* Debug */,
+				9818D4D42817E00400E0CD42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9818D4872817DFA000E0CD42 /* Project object */;
+}
