@@ -12,32 +12,38 @@ struct SecondView: View {
 
     @State private var isShowPhotoLibrary = false
     @State private var image = UIImage()
+
     
     var body: some View {
 
+        
+        
         VStack{
-            Image(uiImage: self.image)
-                .resizable()
-                .scaledToFill()
-                .frame(minWidth: 0, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.all)
             
-            Button(action: {
-                self.isShowPhotoLibrary = true
-            }) {
-                HStack{
-                    Image(systemName: "photo")
-                    Text("사진앨범")
+            ScrollView{
+                
+
+                LazyVGridView()
+
+
+                Button(action: {
+                    self.isShowPhotoLibrary = true
+                }) {
+                    HStack{
+                        Image(systemName: "photo")
+                        Text("사진찍기")
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .padding(.horizontal)
                 }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
-                .background(.blue)
-                .foregroundColor(.white)
-                .cornerRadius(20)
-                .padding(.horizontal)
             }
-        }
-        .sheet(isPresented: $isShowPhotoLibrary) {
-            ImagePicker(sourceType: .photoLibrary)
+            .sheet(isPresented: $isShowPhotoLibrary) {
+                ImagePicker(sourceType: .photoLibrary)
+                    
+            }
         }
     }
 }

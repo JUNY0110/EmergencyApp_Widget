@@ -21,6 +21,12 @@ struct EmergencyTabView: View {
                     Image(systemName: "pills.fill")
                     Text("사진")
                 }
+            
+            ThirdView()
+                .tabItem{
+                    Image(systemName: "waveform")
+                    Text("녹음")
+                }
         }
     }
 }

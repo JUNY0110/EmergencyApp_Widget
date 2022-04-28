@@ -25,7 +25,6 @@
 		9818D4DC28181C4300E0CD42 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4DB28181C4300E0CD42 /* DataList.swift */; };
 		9818D4DE28181CE800E0CD42 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4DD28181CE800E0CD42 /* SecondView.swift */; };
 		9818D4E028181DC500E0CD42 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4DF28181DC500E0CD42 /* ImagePicker.swift */; };
-		9818D4E228181F2C00E0CD42 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E128181F2C00E0CD42 /* CameraView.swift */; };
 		9818D4E42818EC8200E0CD42 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E32818EC8200E0CD42 /* ProfileImage.swift */; };
 		9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E52818ECB300E0CD42 /* NameField.swift */; };
 		9818D4E82818ECE200E0CD42 /* BirthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E72818ECE200E0CD42 /* BirthPicker.swift */; };
@@ -37,6 +36,9 @@
 		9818D4F528192BDF00E0CD42 /* EmergencyTabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */; };
 		9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F828192E1500E0CD42 /* LaunchScreen.swift */; };
 		9818D4FC2819A49700E0CD42 /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */; };
+		98F4BFBB281AF8CF00FAF0E5 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBA281AF8CF00FAF0E5 /* ThirdView.swift */; };
+		98F4BFBD281AFB6600FAF0E5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */; };
+		98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +101,6 @@
 		9818D4DB28181C4300E0CD42 /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
 		9818D4DD28181CE800E0CD42 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		9818D4DF28181DC500E0CD42 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		9818D4E128181F2C00E0CD42 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		9818D4E32818EC8200E0CD42 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		9818D4E52818ECB300E0CD42 /* NameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameField.swift; sourceTree = "<group>"; };
 		9818D4E72818ECE200E0CD42 /* BirthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthPicker.swift; sourceTree = "<group>"; };
@@ -112,6 +113,9 @@
 		9818D4F828192E1500E0CD42 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		9818D4FA2819A2AF00E0CD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
+		98F4BFBA281AF8CF00FAF0E5 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,12 +184,13 @@
 				9818D4F828192E1500E0CD42 /* LaunchScreen.swift */,
 				9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */,
 				9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */,
+				9818D4DB28181C4300E0CD42 /* DataList.swift */,
 				9818D4D62818103B00E0CD42 /* MainView.swift */,
 				9818D4DD28181CE800E0CD42 /* SecondView.swift */,
+				98F4BFBA281AF8CF00FAF0E5 /* ThirdView.swift */,
 				9818D4F12818EE8800E0CD42 /* MainComponent */,
+				98F4BFC0281AFD1C00FAF0E5 /* SecondComponent */,
 				9818D4DF28181DC500E0CD42 /* ImagePicker.swift */,
-				9818D4E128181F2C00E0CD42 /* CameraView.swift */,
-				9818D4DB28181C4300E0CD42 /* DataList.swift */,
 				9818D4962817DFA200E0CD42 /* Assets.xcassets */,
 				9818D4982817DFA200E0CD42 /* Preview Content */,
 			);
@@ -250,6 +255,15 @@
 				9818D4F2281916C300E0CD42 /* MedicineRecord.swift */,
 			);
 			path = MainComponent;
+			sourceTree = "<group>";
+		};
+		98F4BFC0281AFD1C00FAF0E5 /* SecondComponent */ = {
+			isa = PBXGroup;
+			children = (
+				98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */,
+				98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */,
+			);
+			path = SecondComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,19 +433,21 @@
 				9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */,
 				9818D4CE2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */,
 				9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */,
+				98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */,
 				9818D4E028181DC500E0CD42 /* ImagePicker.swift in Sources */,
+				98F4BFBB281AF8CF00FAF0E5 /* ThirdView.swift in Sources */,
 				9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */,
 				9818D4EE2818EDCE00E0CD42 /* EmergencyContact.swift in Sources */,
 				9818D4F528192BDF00E0CD42 /* EmergencyTabview.swift in Sources */,
 				9818D4E42818EC8200E0CD42 /* ProfileImage.swift in Sources */,
 				9818D4F02818EDFA00E0CD42 /* SpareContact.swift in Sources */,
 				9818D4952817DFA000E0CD42 /* ContentView.swift in Sources */,
+				98F4BFBD281AFB6600FAF0E5 /* CameraView.swift in Sources */,
 				9818D4D72818103B00E0CD42 /* MainView.swift in Sources */,
 				9818D4EA2818ED4A00E0CD42 /* BloodTypePicker.swift in Sources */,
 				9818D4F3281916C300E0CD42 /* MedicineRecord.swift in Sources */,
 				9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */,
 				9818D4E82818ECE200E0CD42 /* BirthPicker.swift in Sources */,
-				9818D4E228181F2C00E0CD42 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
