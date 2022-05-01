@@ -40,14 +40,6 @@ struct MainView: View {
                     Divider()
                     
                     MedicineRecord()
-//                    HStack{
-//
-//                        Spacer()
-//                        Image(systemName: "camera.circle")
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                            .frame(width: 70, height: 70)
-//                    }
                 }
             }
             .padding(40)

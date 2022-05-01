@@ -33,7 +33,7 @@ struct LazyVGridView: View {
                     .font(.title2)
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
-                    .background(.blue)
+                    .background(Color.LaunchRed)
                 )
                 
                 
@@ -44,6 +44,7 @@ struct LazyVGridView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .cornerRadius(5)
+                        .padding(.horizontal, 10)
                 
                     }
                 }

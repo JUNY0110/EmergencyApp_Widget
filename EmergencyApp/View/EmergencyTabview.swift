@@ -22,10 +22,15 @@ struct EmergencyTabView: View {
                     Text("사진")
                 }
             
-            ThirdView()
+            RecordButton()
                 .tabItem{
                     Image(systemName: "waveform")
                     Text("녹음")
+                }
+            ForthView()
+                .tabItem{
+                    
+                    Text("위젯")
                 }
         }
     }
