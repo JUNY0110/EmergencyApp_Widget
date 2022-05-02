@@ -18,7 +18,15 @@ struct CameraView: View {
                 .onAppear{
                     viewModel.configure()
                 }
-                
+                .gesture(MagnificationGesture()
+                            .onChanged { val in
+                    viewModel.zoom(factor: val)
+                            }
+                            .onEnded { _ in
+                    viewModel.zoomInitialize()
+                            }
+                )
+            
             VStack{
 
                 HStack{
@@ -66,14 +74,21 @@ struct CameraView: View {
 
                 HStack{
 
-
-                    Button(action: {
-
-                    }){
+                    Button(action: {}){
+                        if let previewImage = viewModel.recentImage {
+                            Image(uiImage: previewImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 50, height: 50)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .aspectRatio(1, contentMode: .fit)
+                        } else {
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(lineWidth: 5)
+                            .stroke(lineWidth: 3)
                             .frame(width: 50, height: 50)
                             .cornerRadius(10)
+                    
+                        }
                     }
 
                     Spacer()
@@ -83,7 +98,7 @@ struct CameraView: View {
                     }) {
 
                         Circle()
-                            .stroke(lineWidth: 5)
+                            .stroke(lineWidth: 3)
                             .frame(width: 50, height: 50)
                         
                     }
@@ -104,11 +119,14 @@ struct CameraView: View {
                 }
                 .foregroundColor(.white)
                 .padding(10)
-
                 .background(.black)
                 .opacity(0.7)
             }
         }
+        .opacity(viewModel.shutterEffect ? 0 : 1)
+
+//                .navigationTitle("")
+//                .navigationBarHidden(true)
     }
 }
 

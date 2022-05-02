@@ -49,6 +49,7 @@ struct LazyVGridView: View {
                     }
                 }
             })
+            Divider()
         }
         
     }

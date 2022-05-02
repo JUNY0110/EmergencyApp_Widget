@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		980B2F2F281EC30C00054AFE /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F2E281EC30C00054AFE /* CameraViewModel.swift */; };
+		980B2F31281FB95B00054AFE /* kkk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F30281FB95B00054AFE /* kkk.swift */; };
 		9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */; };
 		9818D4952817DFA000E0CD42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4942817DFA000E0CD42 /* ContentView.swift */; };
 		9818D4972817DFA200E0CD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4962817DFA200E0CD42 /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 
 /* Begin PBXFileReference section */
 		980B2F2E281EC30C00054AFE /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		980B2F30281FB95B00054AFE /* kkk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kkk.swift; sourceTree = "<group>"; };
 		9818D48F2817DFA000E0CD42 /* EmergencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAppApp.swift; sourceTree = "<group>"; };
 		9818D4942817DFA000E0CD42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */,
 				98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */,
 				98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */,
+				980B2F30281FB95B00054AFE /* kkk.swift */,
 			);
 			path = SecondViewComponent;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */,
 				98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */,
 				98F4BFCF281CE49600FAF0E5 /* ForthView.swift in Sources */,
+				980B2F31281FB95B00054AFE /* kkk.swift in Sources */,
 				9818D4E028181DC500E0CD42 /* ImagePicker.swift in Sources */,
 				98F4BFBB281AF8CF00FAF0E5 /* ThirdView.swift in Sources */,
 				9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */,
@@ -673,7 +677,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmergencyApp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera permission";
+				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱은 사진 촬영 권한이 필요합니다. 카메라 접근을 허용해주세요.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "이 앱은 사진 촬영 후 저장합니다. 앨범에 대한 권한을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -706,7 +711,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmergencyApp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera permission";
+				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱은 사진 촬영 권한이 필요합니다. 카메라 접근을 허용해주세요.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "이 앱은 사진 촬영 후 저장합니다. 앨범에 대한 권한을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

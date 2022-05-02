@@ -17,7 +17,7 @@ struct SecondView: View {
     
     var body: some View {
 
-        
+//        NavigationView{
         VStack{
 
             ScrollView{
@@ -26,25 +26,50 @@ struct SecondView: View {
             
             Button(action: {
                     self.showModal = true
-                
+
             }) {
                 HStack{
                     Image(systemName: "camera.fill")
                     Text("사진촬영")
                         .font(.system(size: 20, weight: .regular))
                 }
-                .frame(width: 200, height: 40)
+                .frame(width: 350, height: 40)
                 .background(Color.LaunchRed)
                 .foregroundColor(.white)
                 .cornerRadius(20)
                 .padding(.horizontal)
             }
-            .sheet(isPresented: self.$showModal) {
+            .fullScreenCover(isPresented: self.$showModal) {
                 CameraView()
             }
+
+//            NavigationLink(destination: CameraView()){
+//                ZStack{
+//
+//                    RoundedRectangle(cornerRadius: 40)
+//                        .frame(width: 350, height: 40)
+//                        .foregroundColor(Color.LaunchRed)
+//                    HStack{
+//                        Image(systemName: "camera.fill")
+//                        Text("사진촬영")
+//                            .font(.system(size: 20, weight: .regular))
+//                    }                            .foregroundColor(.white)
+//
+//
+//                }
+//            }
+//
+//            }
+//        .navigationTitle("")
+//        .navigationBarHidden(true)
+//        }
+    
         }
     }
 }
+
+
+
 
 //struct ImagePicker: UIViewControllerRepresentable {
 //

@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct EmergencyData: Identifiable {
-    var id = UUID()
-    var name: String
-    var bloodType: String
-    var emergencyContact: String
-    var spareContact: String
-    var disease: String
-}
-
-var emrgencyData = [
-    EmergencyData(name: "Eddy", bloodType: "A+", emergencyContact: "119", spareContact: "010-3184-3444", disease: "당뇨"
-    )
-]
+//struct EmergencyData: Identifiable {
+//    var id = UUID()
+//    var name: String
+//    var bloodType: String
+//    var emergencyContact: String
+//    var spareContact: String
+//    var disease: String
+//}
+//
+//var emrgencyData = [
+//    EmergencyData(name: "Eddy", bloodType: "A+", emergencyContact: "119", spareContact: "010-3184-3444", disease: "당뇨"
+//    )
+//]
 
 
 struct MedicineRecordData: Identifiable, Hashable {
