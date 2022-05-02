@@ -20,6 +20,7 @@ class CameraViewModel: ObservableObject {
     var lastScale: CGFloat = 1.0
 
     private var subscriptions = Set<AnyCancellable>()
+    
     @Published var shutterEffect = false
 
     @Published var recentImage: UIImage?

@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		980B2F2F281EC30C00054AFE /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F2E281EC30C00054AFE /* CameraViewModel.swift */; };
-		980B2F31281FB95B00054AFE /* kkk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F30281FB95B00054AFE /* kkk.swift */; };
+		980B2F33281FEC8300054AFE /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F32281FEC8300054AFE /* AudioRecorder.swift */; };
+		980B2F36281FF04C00054AFE /* RecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F35281FF04C00054AFE /* RecorderView.swift */; };
+		980B2F38281FF73600054AFE /* RecordingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F37281FF73600054AFE /* RecordingList.swift */; };
 		9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */; };
 		9818D4952817DFA000E0CD42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4942817DFA000E0CD42 /* ContentView.swift */; };
 		9818D4972817DFA200E0CD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4962817DFA200E0CD42 /* Assets.xcassets */; };
@@ -86,7 +88,9 @@
 
 /* Begin PBXFileReference section */
 		980B2F2E281EC30C00054AFE /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
-		980B2F30281FB95B00054AFE /* kkk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kkk.swift; sourceTree = "<group>"; };
+		980B2F32281FEC8300054AFE /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		980B2F35281FF04C00054AFE /* RecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderView.swift; sourceTree = "<group>"; };
+		980B2F37281FF73600054AFE /* RecordingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingList.swift; sourceTree = "<group>"; };
 		9818D48F2817DFA000E0CD42 /* EmergencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAppApp.swift; sourceTree = "<group>"; };
 		9818D4942817DFA000E0CD42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +172,16 @@
 				980B2F2E281EC30C00054AFE /* CameraViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		980B2F34281FEC8900054AFE /* ThirdViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				980B2F32281FEC8300054AFE /* AudioRecorder.swift */,
+				980B2F35281FF04C00054AFE /* RecorderView.swift */,
+				980B2F37281FF73600054AFE /* RecordingList.swift */,
+			);
+			path = ThirdViewComponent;
 			sourceTree = "<group>";
 		};
 		9818D4862817DFA000E0CD42 = {
@@ -275,7 +289,6 @@
 				98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */,
 				98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */,
 				98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */,
-				980B2F30281FB95B00054AFE /* kkk.swift */,
 			);
 			path = SecondViewComponent;
 			sourceTree = "<group>";
@@ -291,6 +304,7 @@
 				98F4BFCE281CE49600FAF0E5 /* ForthView.swift */,
 				9818D4F12818EE8800E0CD42 /* MainViewComponent */,
 				98F4BFC0281AFD1C00FAF0E5 /* SecondViewComponent */,
+				980B2F34281FEC8900054AFE /* ThirdViewComponent */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -477,14 +491,15 @@
 			files = (
 				9818D4DE28181CE800E0CD42 /* SecondView.swift in Sources */,
 				9818D4DC28181C4300E0CD42 /* DataList.swift in Sources */,
+				980B2F38281FF73600054AFE /* RecordingList.swift in Sources */,
 				980B2F2F281EC30C00054AFE /* CameraViewModel.swift in Sources */,
 				9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */,
+				980B2F33281FEC8300054AFE /* AudioRecorder.swift in Sources */,
 				98F4BFC7281BDA8200FAF0E5 /* CameraPreviewView.swift in Sources */,
 				9818D4CE2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */,
 				9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */,
 				98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */,
 				98F4BFCF281CE49600FAF0E5 /* ForthView.swift in Sources */,
-				980B2F31281FB95B00054AFE /* kkk.swift in Sources */,
 				9818D4E028181DC500E0CD42 /* ImagePicker.swift in Sources */,
 				98F4BFBB281AF8CF00FAF0E5 /* ThirdView.swift in Sources */,
 				9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */,
@@ -496,6 +511,7 @@
 				9818D4D72818103B00E0CD42 /* MainView.swift in Sources */,
 				9818D4EA2818ED4A00E0CD42 /* BloodTypePicker.swift in Sources */,
 				98F4BFD4281E7C0000FAF0E5 /* CameraView.swift in Sources */,
+				980B2F36281FF04C00054AFE /* RecorderView.swift in Sources */,
 				98F4BFD1281E78BF00FAF0E5 /* Camera.swift in Sources */,
 				9818D4F3281916C300E0CD42 /* MedicineRecord.swift in Sources */,
 				9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */,
@@ -678,6 +694,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmergencyApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱은 사진 촬영 권한이 필요합니다. 카메라 접근을 허용해주세요.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "이 앱은 녹음 후 저장합니다. 녹음 기능에 대한 권한을 허용해주세요.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "이 앱은 사진 촬영 후 저장합니다. 앨범에 대한 권한을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -712,6 +729,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmergencyApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱은 사진 촬영 권한이 필요합니다. 카메라 접근을 허용해주세요.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "이 앱은 녹음 후 저장합니다. 녹음 기능에 대한 권한을 허용해주세요.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "이 앱은 사진 촬영 후 저장합니다. 앨범에 대한 권한을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
