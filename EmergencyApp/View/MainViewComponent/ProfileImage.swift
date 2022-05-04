@@ -14,6 +14,7 @@ struct ProfileImage: View {
             .aspectRatio(contentMode: .fit)
             .clipShape(Circle())
             .frame(width: 150, height: 150)
+            .shadow(color: .gray, radius: 5, x: 3, y: 3)
         
     }
 }

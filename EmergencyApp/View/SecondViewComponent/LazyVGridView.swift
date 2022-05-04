@@ -25,31 +25,29 @@ struct LazyVGridView: View {
     
     var body: some View {
             
-        ScrollView{
-            
-            LazyVGrid(columns: columns, alignment: .center, spacing: nil, pinnedViews: [], content: {
+        VStack {
+//            ScrollView{
                 
-                Section(header: Text("\(today, formatter: LazyVGridView.dateformat)")
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.LaunchRed)
-                )
-                
-                
-                {
-                    ForEach(medicineRecordData, id: \.self){
-                    medical in
-                    Image(medical.image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .cornerRadius(5)
-                        .padding(.horizontal, 10)
-                
+                LazyVGrid(columns: columns, alignment: .center, spacing: nil, pinnedViews: [], content: {
+                    Section(header: Text("\(today, formatter: LazyVGridView.dateformat)")
+                        .font(.title2)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: .infinity)
+                    )
+                    {
+                        ForEach(medicineRecordData, id: \.self){
+                        medical in
+                        Image(medical.image)
+                            .resizable()
+                            
+                            .frame(width: 170, height: 150)
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
+                            .scaledToFill()
+                        }
                     }
-                }
-            })
-            Divider()
+                })
+                Divider()
+//            }
         }
         
     }

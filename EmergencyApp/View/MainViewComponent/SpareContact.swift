@@ -19,6 +19,7 @@ struct SpareContact: View {
             TextField("000-0000-0000", text: self.$spareContact)
                 .frame(width: 150, alignment: .trailing)
                 .multilineTextAlignment(.trailing)
+                .keyboardType(.decimalPad)
         }        
     }
 }

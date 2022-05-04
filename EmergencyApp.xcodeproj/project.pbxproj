@@ -11,6 +11,9 @@
 		980B2F33281FEC8300054AFE /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F32281FEC8300054AFE /* AudioRecorder.swift */; };
 		980B2F36281FF04C00054AFE /* RecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F35281FF04C00054AFE /* RecorderView.swift */; };
 		980B2F38281FF73600054AFE /* RecordingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F37281FF73600054AFE /* RecordingList.swift */; };
+		980B2F3A2820C53100054AFE /* RecordingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F392820C53100054AFE /* RecordingData.swift */; };
+		980B2F3C282116A700054AFE /* TestText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F3B282116A700054AFE /* TestText.swift */; };
+		980B2F40282195EA00054AFE /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F3F282195E900054AFE /* AudioPlayer.swift */; };
 		9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */; };
 		9818D4952817DFA000E0CD42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4942817DFA000E0CD42 /* ContentView.swift */; };
 		9818D4972817DFA200E0CD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4962817DFA200E0CD42 /* Assets.xcassets */; };
@@ -91,6 +94,9 @@
 		980B2F32281FEC8300054AFE /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		980B2F35281FF04C00054AFE /* RecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderView.swift; sourceTree = "<group>"; };
 		980B2F37281FF73600054AFE /* RecordingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingList.swift; sourceTree = "<group>"; };
+		980B2F392820C53100054AFE /* RecordingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingData.swift; sourceTree = "<group>"; };
+		980B2F3B282116A700054AFE /* TestText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestText.swift; sourceTree = "<group>"; };
+		980B2F3F282195E900054AFE /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		9818D48F2817DFA000E0CD42 /* EmergencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAppApp.swift; sourceTree = "<group>"; };
 		9818D4942817DFA000E0CD42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -177,8 +183,9 @@
 		980B2F34281FEC8900054AFE /* ThirdViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				980B2F392820C53100054AFE /* RecordingData.swift */,
+				980B2F3F282195E900054AFE /* AudioPlayer.swift */,
 				980B2F32281FEC8300054AFE /* AudioRecorder.swift */,
-				980B2F35281FF04C00054AFE /* RecorderView.swift */,
 				980B2F37281FF73600054AFE /* RecordingList.swift */,
 			);
 			path = ThirdViewComponent;
@@ -279,6 +286,7 @@
 				9818D4EF2818EDFA00E0CD42 /* SpareContact.swift */,
 				9818D4EB2818EDA200E0CD42 /* MedicalRecord.swift */,
 				9818D4F2281916C300E0CD42 /* MedicineRecord.swift */,
+				980B2F3B282116A700054AFE /* TestText.swift */,
 			);
 			path = MainViewComponent;
 			sourceTree = "<group>";
@@ -300,7 +308,7 @@
 				9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */,
 				9818D4D62818103B00E0CD42 /* MainView.swift */,
 				9818D4DD28181CE800E0CD42 /* SecondView.swift */,
-				98F4BFBA281AF8CF00FAF0E5 /* ThirdView.swift */,
+				980B2F35281FF04C00054AFE /* RecorderView.swift */,
 				98F4BFCE281CE49600FAF0E5 /* ForthView.swift */,
 				9818D4F12818EE8800E0CD42 /* MainViewComponent */,
 				98F4BFC0281AFD1C00FAF0E5 /* SecondViewComponent */,
@@ -321,6 +329,7 @@
 		98F4BFC5281BCC7B00FAF0E5 /* NoUse */ = {
 			isa = PBXGroup;
 			children = (
+				98F4BFBA281AF8CF00FAF0E5 /* ThirdView.swift */,
 				9818D4F828192E1500E0CD42 /* LaunchScreen.swift */,
 				9818D4DF28181DC500E0CD42 /* ImagePicker.swift */,
 			);
@@ -509,11 +518,14 @@
 				9818D4F02818EDFA00E0CD42 /* SpareContact.swift in Sources */,
 				9818D4952817DFA000E0CD42 /* ContentView.swift in Sources */,
 				9818D4D72818103B00E0CD42 /* MainView.swift in Sources */,
+				980B2F3C282116A700054AFE /* TestText.swift in Sources */,
 				9818D4EA2818ED4A00E0CD42 /* BloodTypePicker.swift in Sources */,
+				980B2F40282195EA00054AFE /* AudioPlayer.swift in Sources */,
 				98F4BFD4281E7C0000FAF0E5 /* CameraView.swift in Sources */,
 				980B2F36281FF04C00054AFE /* RecorderView.swift in Sources */,
 				98F4BFD1281E78BF00FAF0E5 /* Camera.swift in Sources */,
 				9818D4F3281916C300E0CD42 /* MedicineRecord.swift in Sources */,
+				980B2F3A2820C53100054AFE /* RecordingData.swift in Sources */,
 				9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */,
 				9818D4E82818ECE200E0CD42 /* BirthPicker.swift in Sources */,
 			);

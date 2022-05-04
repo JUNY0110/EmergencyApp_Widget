@@ -19,10 +19,14 @@ struct SecondView: View {
 
 //        NavigationView{
         VStack{
-
-            ScrollView{
+                
+            
+            ScrollView(.vertical, showsIndicators: false, content: {
                 LazyVGridView()
-            }
+            })
+            .frame(width: .infinity, height: 550)
+//            .frame(width: .infinity, height: 600)
+            
             
             Button(action: {
                     self.showModal = true
@@ -37,33 +41,15 @@ struct SecondView: View {
                 .background(Color.LaunchRed)
                 .foregroundColor(.white)
                 .cornerRadius(20)
-                .padding(.horizontal)
+                .padding(.bottom,10)
             }
             .fullScreenCover(isPresented: self.$showModal) {
                 CameraView()
             }
+            
 
-//            NavigationLink(destination: CameraView()){
-//                ZStack{
-//
-//                    RoundedRectangle(cornerRadius: 40)
-//                        .frame(width: 350, height: 40)
-//                        .foregroundColor(Color.LaunchRed)
-//                    HStack{
-//                        Image(systemName: "camera.fill")
-//                        Text("사진촬영")
-//                            .font(.system(size: 20, weight: .regular))
-//                    }                            .foregroundColor(.white)
-//
-//
-//                }
 //            }
-//
-//            }
-//        .navigationTitle("")
-//        .navigationBarHidden(true)
-//        }
-    
+//            .frame(width: .infinity, height: 600)
         }
     }
 }

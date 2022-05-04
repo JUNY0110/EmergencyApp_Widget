@@ -8,40 +8,30 @@
 import SwiftUI
 
 struct RecordingList: View {
+    var soundSetting = AudioRecorder()
+    
     @ObservedObject var audioRecorder: AudioRecorder
     
-    var body: some View {
-//        Text("진료 및 처방에 대한 음성을 기록하는 공간입니다.")
     
-        List{
-            Text("Empty List")
-        }
+    let columns = [
+        GridItem(.flexible(), spacing: nil, alignment: nil),
+        GridItem(.flexible(), spacing: nil, alignment: nil)
+    ]
+    
+    var body: some View {    
+        
+        ScrollView(.vertical, showsIndicators: false, content: {
+            LazyVGrid(columns: columns, alignment: .center, spacing: nil, pinnedViews: [], content: {
+                    
+                ForEach(audioRecorder.recordings, id: \.createAt) {recording in
+                    RecordingRow(audioURL: recording.fileURL)
+                }
+            })
+        }).frame(width: .infinity, height: 550)
     }
 }
-//if audioRecorder.recording == false {
-//    Button(action: {
-//        print("Start recording")
-//    }) {
-//        Image(systemName: "record.circle")
-//            .resizable()
-//            .aspectRatio(contentMode: .fit)
-//            .frame(width: 50, height: 50)
-//            .clipped()
-//            .foregroundColor(.red)
-//    }
-//} else {
-//    Button(action: {
-//        print("Stop Recording")
-//    }){
-//        Image(systemName: "stop.circle")
-//            .resizable()
-//            .aspectRatio(contentMode: .fit)
-//            .frame(width: 50, height: 50)
-//            .clipped()
-//            .foregroundColor(.black)
-//    }
-//}
 
+ 
 struct RecordList_Previews: PreviewProvider {
     static var previews: some View {
         RecordingList(audioRecorder: AudioRecorder())

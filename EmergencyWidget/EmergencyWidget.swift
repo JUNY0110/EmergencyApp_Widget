@@ -56,8 +56,8 @@ struct EmergencyWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             EmergencyWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("정보 보여주기")
+        .description("위젯을 통해 당신에 대한 기본 정보를 제공할 수 있어요.")
     }
 }
 

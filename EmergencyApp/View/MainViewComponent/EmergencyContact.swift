@@ -15,9 +15,19 @@ struct EmergencyContact: View {
             Text("비상연락처")
                 .font(.system(size: 20, weight: .bold, design: .rounded))
             Spacer()
+//            TestTextfield(text: self.$emergencyContact, keyType: UIKeyboardType.phonePad)
+//                .frame(width: 150, alignment: .trailing)
+//                .multilineTextAlignment(.trailing)
+//                .keyboardType(.decimalPad)
+            
+//
             TextField("119", text: self.$emergencyContact)
                 .frame(width: 150, alignment: .trailing)
                 .multilineTextAlignment(.trailing)
+                .submitLabel(.done)
+                .keyboardType(.decimalPad)
+
+                
         }        
     }
 }

@@ -25,7 +25,9 @@ struct NameField: View {
                 TextField("이름", text: self.$name)
                     .frame(width: 150, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
+                    .submitLabel(.done)
             }
+            
             Divider()
 
         }
