@@ -14,12 +14,13 @@ struct RecordingRow: View {
     @ObservedObject var audioPlayer = AudioPlayer()
     
     var body: some View{
+        
         ZStack{
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(.white)
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
 
-            VStack{
+            HStack{
                 if audioPlayer.isPlaying == false {
                     Button(action: {
                         self.audioPlayer.startPlayback(audio: audioURL)
@@ -39,9 +40,12 @@ struct RecordingRow: View {
                             .frame(width: 50, height: 100)
                     }
                 }
-                Spacer()
                 
-                Text("\(audioURL.lastPathComponent)")
+                VStack(alignment: .trailing){
+                    Text("장소/날짜")
+                    Text("\(audioURL.lastPathComponent)")
+                }
+                
             }
             .padding(10)
         }

@@ -16,7 +16,7 @@ enum Tabs: String {
 
 struct EmergencyTabView: View {
 
-    @State var selection: Tabs = .widget
+    @State var selection: Tabs = .info
     
     var body: some View {
         NavigationView{
@@ -39,13 +39,14 @@ struct EmergencyTabView: View {
                         Text("사진")
                     }.tag(Tabs.photo)
                 
-                RecorderView(audioRecorder: AudioRecorder())
+                ThirdView(audioRecorder: AudioRecorder())
                     .padding(.horizontal, 20)
 
                     .tabItem{
                         Image(systemName: "waveform")
                         Text("녹음")
                     }.tag(Tabs.record)
+                    
                 
                 ForthView()
                     .padding(.horizontal, 20)

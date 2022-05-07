@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let Recorder = RecorderView(audioRecorder: AudioRecorder())
+let Recorder = ThirdView(audioRecorder: AudioRecorder())
 
 struct Recordingbtn: View {
     @ObservedObject var audioRecorder: AudioRecorder

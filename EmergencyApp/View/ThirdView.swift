@@ -9,7 +9,7 @@ import SwiftUI
 
 //let Recorder = RecorderView(audioRecorder: AudioRecorder())
 
-struct RecorderView: View {
+struct ThirdView: View {
     @ObservedObject var audioRecorder: AudioRecorder
 
     
@@ -19,6 +19,7 @@ struct RecorderView: View {
             RecordingList(audioRecorder: AudioRecorder())
             Recordingbtn(audioRecorder: AudioRecorder())
         }
+        .navigationBarItems(trailing: EditButton())
     }
 }
 
@@ -26,6 +27,6 @@ struct RecorderView: View {
 
 struct MedicalRecorder_Previews: PreviewProvider {
     static var previews: some View {
-        RecorderView(audioRecorder: AudioRecorder())
+        ThirdView(audioRecorder: AudioRecorder())
     }
 }

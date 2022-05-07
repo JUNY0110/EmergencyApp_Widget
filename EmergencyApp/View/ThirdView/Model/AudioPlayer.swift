@@ -19,6 +19,7 @@ class AudioPlayer: NSObject,ObservableObject, AVAudioPlayerDelegate {
         }
     }
     var audioPlayer: AVAudioPlayer!
+    
     func startPlayback(audio: URL) {
         let playbackSession = AVAudioSession.sharedInstance()
         
@@ -42,4 +43,11 @@ class AudioPlayer: NSObject,ObservableObject, AVAudioPlayerDelegate {
         audioPlayer.stop()
         isPlaying = false
     }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if flag{
+            isPlaying = false
+        }
+    }
+    
 }

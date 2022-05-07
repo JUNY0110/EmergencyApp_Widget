@@ -179,20 +179,19 @@
 		980B2F2D281EC2FA00054AFE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				980B2F2E281EC30C00054AFE /* CameraViewModel.swift */,
 				980B2F32281FEC8300054AFE /* AudioRecorder.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		980B2F34281FEC8900054AFE /* ThirdViewComponent */ = {
+		980B2F34281FEC8900054AFE /* ThirdView */ = {
 			isa = PBXGroup;
 			children = (
-				980B2F37281FF73600054AFE /* RecordingList.swift */,
-				980B2F5328263A2100054AFE /* Recordingbtn.swift */,
-				980B2F512826382F00054AFE /* RecordingRow.swift */,
+				98F4BFC4281BCC6C00FAF0E5 /* Model */,
+				980B2F2D281EC2FA00054AFE /* ViewModel */,
+				980B2F5E2826940D00054AFE /* View */,
 			);
-			path = ThirdViewComponent;
+			path = ThirdView;
 			sourceTree = "<group>";
 		};
 		980B2F5928264EF400054AFE /* CameraBtn */ = {
@@ -202,6 +201,44 @@
 				980B2F5728264DDE00054AFE /* CameraBottomBtn.swift */,
 			);
 			path = CameraBtn;
+			sourceTree = "<group>";
+		};
+		980B2F5B282693AF00054AFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9818D4DB28181C4300E0CD42 /* Data.swift */,
+				98F4BFD0281E78BF00FAF0E5 /* Camera.swift */,
+				98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		980B2F5C282693C900054AFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				980B2F2E281EC30C00054AFE /* CameraViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		980B2F5D282693DF00054AFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */,
+				98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */,
+				980B2F5928264EF400054AFE /* CameraBtn */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		980B2F5E2826940D00054AFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				980B2F37281FF73600054AFE /* RecordingList.swift */,
+				980B2F5328263A2100054AFE /* Recordingbtn.swift */,
+				980B2F512826382F00054AFE /* RecordingRow.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9818D4862817DFA000E0CD42 = {
@@ -235,8 +272,6 @@
 				9818D4FA2819A2AF00E0CD42 /* Info.plist */,
 				9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */,
 				9818D4942817DFA000E0CD42 /* ContentView.swift */,
-				98F4BFC4281BCC6C00FAF0E5 /* Model */,
-				980B2F2D281EC2FA00054AFE /* ViewModel */,
 				98F4BFC3281BCC3300FAF0E5 /* View */,
 				98F4BFC5281BCC7B00FAF0E5 /* TestIOnly */,
 				9818D4962817DFA200E0CD42 /* Assets.xcassets */,
@@ -290,7 +325,7 @@
 			path = EmergencyWidget;
 			sourceTree = "<group>";
 		};
-		9818D4F12818EE8800E0CD42 /* MainViewComponent */ = {
+		9818D4F12818EE8800E0CD42 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
 				9818D4E32818EC8200E0CD42 /* ProfileImage.swift */,
@@ -302,17 +337,17 @@
 				9818D4EB2818EDA200E0CD42 /* MedicalRecord.swift */,
 				9818D4F2281916C300E0CD42 /* MedicineRecord.swift */,
 			);
-			path = MainViewComponent;
+			path = MainView;
 			sourceTree = "<group>";
 		};
-		98F4BFC0281AFD1C00FAF0E5 /* SecondViewComponent */ = {
+		98F4BFC0281AFD1C00FAF0E5 /* SecondView */ = {
 			isa = PBXGroup;
 			children = (
-				98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */,
-				98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */,
-				980B2F5928264EF400054AFE /* CameraBtn */,
+				980B2F5B282693AF00054AFE /* Model */,
+				980B2F5C282693C900054AFE /* ViewModel */,
+				980B2F5D282693DF00054AFE /* View */,
 			);
-			path = SecondViewComponent;
+			path = SecondView;
 			sourceTree = "<group>";
 		};
 		98F4BFC3281BCC3300FAF0E5 /* View */ = {
@@ -324,9 +359,9 @@
 				9818D4DD28181CE800E0CD42 /* SecondView.swift */,
 				980B2F35281FF04C00054AFE /* ThirdView.swift */,
 				98F4BFCE281CE49600FAF0E5 /* ForthView.swift */,
-				9818D4F12818EE8800E0CD42 /* MainViewComponent */,
-				98F4BFC0281AFD1C00FAF0E5 /* SecondViewComponent */,
-				980B2F34281FEC8900054AFE /* ThirdViewComponent */,
+				9818D4F12818EE8800E0CD42 /* MainView */,
+				98F4BFC0281AFD1C00FAF0E5 /* SecondView */,
+				980B2F34281FEC8900054AFE /* ThirdView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,11 +369,8 @@
 		98F4BFC4281BCC6C00FAF0E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9818D4DB28181C4300E0CD42 /* Data.swift */,
-				98F4BFD0281E78BF00FAF0E5 /* Camera.swift */,
 				980B2F392820C53100054AFE /* RecordingData.swift */,
 				980B2F3F282195E900054AFE /* AudioPlayer.swift */,
-				98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

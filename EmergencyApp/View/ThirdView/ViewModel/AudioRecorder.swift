@@ -75,10 +75,35 @@ class AudioRecorder: NSObject, ObservableObject {
             recordings.sort(by: {$0.createAt.compare($1.createAt) == .orderedAscending})
             objectWillChange.send(self)
         }
+        recordings.sort(by: { $0.createAt.compare($1.createAt) == .orderedAscending})
+        
+        objectWillChange.send(self)
     }
+    
+//    func delete(at offsets: IndexSet) {
+//        var urlsToDelete = [URL]()
+//        for index in offsets {
+//            urlsToDelete.append(recordings[index].fileURL)
+//            }
+//        }
+//    
+    func deleteRecording(urlsToDelete: [URL]) {
+            
+            for url in urlsToDelete {
+                print(url)
+                do {
+                   try FileManager.default.removeItem(at: url)
+                } catch {
+                    print("File could not be deleted!")
+                }
+            }
+            fetchRecording()
+            
+        }
     
     override init() {
         super.init()
+        print("class init")
         fetchRecording()
     }
 }
