@@ -13,12 +13,6 @@
 		980B2F38281FF73600054AFE /* RecordingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F37281FF73600054AFE /* RecordingList.swift */; };
 		980B2F3A2820C53100054AFE /* RecordingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F392820C53100054AFE /* RecordingData.swift */; };
 		980B2F40282195EA00054AFE /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F3F282195E900054AFE /* AudioPlayer.swift */; };
-		980B2F4228239A6D00054AFE /* TestFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F4128239A6D00054AFE /* TestFirst.swift */; };
-		980B2F4428239B0A00054AFE /* TestSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F4328239B0A00054AFE /* TestSecond.swift */; };
-		980B2F4628239C3E00054AFE /* TestThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F4528239C3E00054AFE /* TestThird.swift */; };
-		980B2F492823BA8500054AFE /* TestFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F4128239A6D00054AFE /* TestFirst.swift */; };
-		980B2F4A2823BCD900054AFE /* TestSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F4328239B0A00054AFE /* TestSecond.swift */; };
-		980B2F4B2823BD4700054AFE /* TestThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F4528239C3E00054AFE /* TestThird.swift */; };
 		980B2F522826382F00054AFE /* RecordingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F512826382F00054AFE /* RecordingRow.swift */; };
 		980B2F5428263A2100054AFE /* Recordingbtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F5328263A2100054AFE /* Recordingbtn.swift */; };
 		9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */; };
@@ -49,7 +43,6 @@
 		9818D4F528192BDF00E0CD42 /* EmergencyTabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */; };
 		9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F828192E1500E0CD42 /* LaunchScreen.swift */; };
 		9818D4FC2819A49700E0CD42 /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */; };
-		98F4BFBB281AF8CF00FAF0E5 /* ThirdView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBA281AF8CF00FAF0E5 /* ThirdView2.swift */; };
 		98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */; };
 		98F4BFC7281BDA8200FAF0E5 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */; };
 		98F4BFCF281CE49600FAF0E5 /* ForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFCE281CE49600FAF0E5 /* ForthView.swift */; };
@@ -102,9 +95,6 @@
 		980B2F37281FF73600054AFE /* RecordingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingList.swift; sourceTree = "<group>"; };
 		980B2F392820C53100054AFE /* RecordingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingData.swift; sourceTree = "<group>"; };
 		980B2F3F282195E900054AFE /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
-		980B2F4128239A6D00054AFE /* TestFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFirst.swift; sourceTree = "<group>"; };
-		980B2F4328239B0A00054AFE /* TestSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSecond.swift; sourceTree = "<group>"; };
-		980B2F4528239C3E00054AFE /* TestThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestThird.swift; sourceTree = "<group>"; };
 		980B2F4728239E2500054AFE /* EmergencyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmergencyApp.entitlements; sourceTree = "<group>"; };
 		980B2F482823B7D500054AFE /* EmergencyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmergencyWidgetExtension.entitlements; sourceTree = "<group>"; };
 		980B2F512826382F00054AFE /* RecordingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingRow.swift; sourceTree = "<group>"; };
@@ -141,7 +131,6 @@
 		9818D4F828192E1500E0CD42 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		9818D4FA2819A2AF00E0CD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
-		98F4BFBA281AF8CF00FAF0E5 /* ThirdView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView2.swift; sourceTree = "<group>"; };
 		98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridView.swift; sourceTree = "<group>"; };
 		98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
@@ -343,11 +332,7 @@
 		98F4BFC5281BCC7B00FAF0E5 /* TestIOnly */ = {
 			isa = PBXGroup;
 			children = (
-				98F4BFBA281AF8CF00FAF0E5 /* ThirdView2.swift */,
 				9818D4F828192E1500E0CD42 /* LaunchScreen.swift */,
-				980B2F4128239A6D00054AFE /* TestFirst.swift */,
-				980B2F4328239B0A00054AFE /* TestSecond.swift */,
-				980B2F4528239C3E00054AFE /* TestThird.swift */,
 			);
 			path = TestIOnly;
 			sourceTree = "<group>";
@@ -516,21 +501,17 @@
 			files = (
 				9818D4DE28181CE800E0CD42 /* SecondView.swift in Sources */,
 				9818D4DC28181C4300E0CD42 /* Data.swift in Sources */,
-				980B2F4228239A6D00054AFE /* TestFirst.swift in Sources */,
 				980B2F38281FF73600054AFE /* RecordingList.swift in Sources */,
 				980B2F2F281EC30C00054AFE /* CameraViewModel.swift in Sources */,
-				980B2F4628239C3E00054AFE /* TestThird.swift in Sources */,
 				980B2F522826382F00054AFE /* RecordingRow.swift in Sources */,
 				9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */,
 				980B2F33281FEC8300054AFE /* AudioRecorder.swift in Sources */,
-				980B2F4428239B0A00054AFE /* TestSecond.swift in Sources */,
 				98F4BFC7281BDA8200FAF0E5 /* CameraPreviewView.swift in Sources */,
 				9818D4CE2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */,
 				9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */,
 				98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */,
 				980B2F5428263A2100054AFE /* Recordingbtn.swift in Sources */,
 				98F4BFCF281CE49600FAF0E5 /* ForthView.swift in Sources */,
-				98F4BFBB281AF8CF00FAF0E5 /* ThirdView2.swift in Sources */,
 				9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */,
 				9818D4EE2818EDCE00E0CD42 /* EmergencyContact.swift in Sources */,
 				9818D4F528192BDF00E0CD42 /* EmergencyTabview.swift in Sources */,
@@ -573,9 +554,6 @@
 			files = (
 				9818D4CD2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */,
 				9818D4C82817E00300E0CD42 /* EmergencyWidget.swift in Sources */,
-				980B2F492823BA8500054AFE /* TestFirst.swift in Sources */,
-				980B2F4A2823BCD900054AFE /* TestSecond.swift in Sources */,
-				980B2F4B2823BD4700054AFE /* TestThird.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
