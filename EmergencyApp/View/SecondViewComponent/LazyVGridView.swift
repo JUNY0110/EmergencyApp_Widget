@@ -39,7 +39,6 @@ struct LazyVGridView: View {
                         medical in
                         Image(medical.image)
                             .resizable()
-                            
                             .frame(width: 170, height: 150)
                             .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
                             .scaledToFill()

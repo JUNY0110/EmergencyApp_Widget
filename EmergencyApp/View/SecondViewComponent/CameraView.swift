@@ -124,9 +124,6 @@ struct CameraView: View {
             }
         }
         .opacity(viewModel.shutterEffect ? 0 : 1)
-
-//                .navigationTitle("")
-//                .navigationBarHidden(true)
     }
 }
 

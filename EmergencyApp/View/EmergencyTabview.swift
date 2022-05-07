@@ -54,7 +54,6 @@ struct EmergencyTabView: View {
                         Text("위젯")
                     }.tag(Tabs.widget)
             }.navigationBarTitle(selection.rawValue, displayMode: .large)
-//            }
         }
     }
 }

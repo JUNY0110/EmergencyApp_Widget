@@ -49,7 +49,6 @@ struct MainView: View {
             }.frame(width: .infinity, height: 600)
         }
     }
-//}
 
 extension View {
     func hideKeyboard() {

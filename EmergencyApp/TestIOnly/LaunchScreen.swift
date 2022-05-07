@@ -16,9 +16,6 @@ struct LaunchScreen: View {
     }
 }
 
-extension Color {
-    static let LaunchRed: Color = Color(red: 255/255, green: 106/255, blue: 95/255)
-}
 
 struct Logo: View {
     

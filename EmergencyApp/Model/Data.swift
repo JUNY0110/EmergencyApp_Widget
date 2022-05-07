@@ -7,20 +7,9 @@
 
 import SwiftUI
 
-//struct EmergencyData: Identifiable {
-//    var id = UUID()
-//    var name: String
-//    var bloodType: String
-//    var emergencyContact: String
-//    var spareContact: String
-//    var disease: String
-//}
-//
-//var emrgencyData = [
-//    EmergencyData(name: "Eddy", bloodType: "A+", emergencyContact: "119", spareContact: "010-3184-3444", disease: "당뇨"
-//    )
-//]
-
+extension Color {
+    static let LaunchRed: Color = Color(red: 255/255, green: 106/255, blue: 95/255)
+}
 
 struct MedicineRecordData: Identifiable, Hashable {
     var id = UUID()

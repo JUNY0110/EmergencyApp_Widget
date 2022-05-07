@@ -39,7 +39,7 @@ class AudioRecorder: NSObject, ObservableObject {
         
         let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let audioFilename = documentPath.appendingPathComponent("\(Date().toString(dateFormat: "dd-MM-YY_'at'_HH:mm:ss")).m4a")
-//        return recordingSession
+
         let settings = [
                   AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
                   AVSampleRateKey: 12000,
@@ -82,7 +82,6 @@ class AudioRecorder: NSObject, ObservableObject {
         fetchRecording()
     }
 }
-//}
     
     func getCreationDate(for file: URL) -> Date {
         if let attributes = try? FileManager.default.attributesOfItem(atPath: file.path) as [FileAttributeKey: Any],
@@ -93,7 +92,6 @@ class AudioRecorder: NSObject, ObservableObject {
             return Date()
         }
     }
-//}
 
 extension Date{
     func toString(dateFormat format: String) -> String{
