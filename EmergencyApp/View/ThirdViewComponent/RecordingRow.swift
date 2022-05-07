@@ -19,7 +19,6 @@ struct RecordingRow: View {
                 .foregroundColor(.white)
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
 
-            
             VStack{
                 if audioPlayer.isPlaying == false {
                     Button(action: {
@@ -38,16 +37,13 @@ struct RecordingRow: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 50, height: 100)
-                        
                     }
                 }
                 Spacer()
                 
                 Text("\(audioURL.lastPathComponent)")
             }
-            
             .padding(10)
-            
         }
     }
 }
