@@ -15,39 +15,39 @@ struct RecordingRow: View {
     
     var body: some View{
         
-        ZStack{
-            RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(.white)
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("장소")
+                        Text("\(audioURL.lastPathComponent)")
+                    }
+                    .padding(.leading, 10)
+                    
+                    Spacer()
+                    
+                    if audioPlayer.isPlaying == false {
+                        Button(action: {
+                            self.audioPlayer.startPlayback(audio: self.audioURL)
+                        }){
+                            Image(systemName: "play.circle")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 80)
+                                .padding(.vertical, 20)
+                        }
+                        .padding(.trailing, 10)
 
-            HStack{
-                if audioPlayer.isPlaying == false {
-                    Button(action: {
-                        self.audioPlayer.startPlayback(audio: audioURL)
-                    }){
-                        Image(systemName: "play.circle")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 50, height: 100)
-                    }
-                } else {
-                    Button(action: {
-                        self.audioPlayer.stopPlayback()
-                    }){
-                        Image(systemName: "stop.circle")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 50, height: 100)
-                    }
-                }
-                
-                VStack(alignment: .trailing){
-                    Text("장소/날짜")
-                    Text("\(audioURL.lastPathComponent)")
-                }
-                
+                    } else {
+                        Button(action: {
+                            self.audioPlayer.stopPlayback()
+                        }){
+                            Image(systemName: "stop.circle")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 80)
+                                .padding(.vertical, 20)
+                        }
+                        .padding(.trailing, 10)
             }
-            .padding(10)
         }
     }
 }

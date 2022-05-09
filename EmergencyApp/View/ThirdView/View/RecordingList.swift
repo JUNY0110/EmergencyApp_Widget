@@ -8,65 +8,81 @@
 import SwiftUI
 
 struct RecordingList: View {
-    var soundSetting = AudioRecorder()
     
     @ObservedObject var audioRecorder: AudioRecorder
-    
-//    let columns = [
-//        GridItem(.flexible(), spacing: nil, alignment: nil),
-//        GridItem(.flexible(), spacing: nil, alignment: nil)
-//    ]
-    @State private var users = ["포뇨", "소스케", "서근"]
 
     var body: some View {
         
-        
+
         List{
-            ForEach(audioRecorder.recordings, id: \.createAt) {recording in
-                RecordingRow(audioURL: recording.fileURL)
-            }.onDelete(perform: delete)
-//                .onMove(perform: moveList)
-        }.listStyle(GroupedListStyle())
-//
-//        ScrollView(.vertical, showsIndicators: false, content: {
-//            LazyVGrid(columns: columns, alignment: .center, spacing: nil, pinnedViews: [], content: {
-//
-//                ForEach(audioRecorder.recordings, id: \.createAt) {recording in
-//                    RecordingRow(audioURL: recording.fileURL)
-//                }
-//            })
-//        }).frame(width: .infinity, height: 550)
+            Section(
+                header: Text("\(Date(), formatter: LazyVGridView.dateformat)")
+                    .font(.system(size: 25, weight: .bold, design: .rounded))
+            ){
+                ForEach(
+                    audioRecorder.recordings, id: \.createdAt) {recording in
+                    RecordingRow(audioURL: recording.fileURL)
+                }
+                    .onDelete(perform: delete)
+            }
+        }
+            .listStyle(GroupedListStyle())
+            .colorMultiply(.white)
+            .frame(width: 390, height: 550)
+        
+        if audioRecorder.recording == false {
+        
+            Button(action: {
+            
+                self.audioRecorder.startRecording()
+                print("Start recording")
+            }) {
+                HStack{
+                    Image(systemName: "mic.fill")
+                    Text("음성기록하기")
+                        .font(.system(size: 20, weight: .regular))
+                }
+                .frame(width: 350, height: 40)
+                .background(Color.LaunchRed)
+                .foregroundColor(.white)
+                .cornerRadius(20)
+                .padding(.horizontal)
+                .padding(.bottom,10)
+            }
+        } else {
+            Button(action: {
+                self.audioRecorder.stopRecording()
+                print("Stop Recording")
+                
+            }){
+                HStack{
+                    Image(systemName: "stop.circle")
+                    Text("기록저장하기")
+                        .font(.system(size: 20, weight: .regular))
+                }
+            }
+            .frame(width: 350, height: 40)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(20)
+            .padding(.horizontal)
+            .padding(.bottom,10)
+        }
     }
+    
     
     func delete(at offsets: IndexSet) {
         var urlsToDelete = [URL]()
         for index in offsets {
-            urlsToDelete.append(audioRecorder.recordings[index].fileURL)
-            }
-        audioRecorder.deleteRecording(urlsToDelete: urlsToDelete)
+            urlsToDelete
+                .append(audioRecorder.recordings[index].fileURL)
         }
+        audioRecorder.deleteRecording(urlsToDelete: urlsToDelete)
+    }
     
-    
-//    func delete(at offsets: IndexSet) {
-//
-//        var urlsToDelete = [URL]()
-//        for index in offsets {
-//            urlsToDelete.append(audioRecorder.recordings[index].fileURL)
-//        }
-//        audioRecorder.deleteRecording(urlsToDelete: urlsToDelete)
-//    }
-//
-    
-    
-    
-//    func removeList(at offsets: IndexSet) {
-//        print(offsets)
-//        audioRecorder.recordings.remove(atOffsets: offsets)
-//    }
-//    func moveList(from source: IndexSet, to destination: Int) {
-//        audioRecorder.recordings.move(fromOffsets: source, toOffset: destination)
-//    }
 }
+
+
 
  
 struct RecordList_Previews: PreviewProvider {
@@ -74,94 +90,3 @@ struct RecordList_Previews: PreviewProvider {
         RecordingList(audioRecorder: AudioRecorder())
     }
 }
-
-//
-//struct Delete: ViewModifier {
-//
-//    let action: () -> Void
-//
-//    @State var offset: CGSize = .zero
-//    @State var initialOffset: CGSize = .zero
-//    @State var contentWidth: CGFloat = 0.0
-//    @State var willDeleteIfReleased = false
-//
-//    func body(content: Content) -> some View {
-//        content
-//            .background(
-//                GeometryReader { geometry in
-//                    ZStack {
-//                        Rectangle()
-//                            .foregroundColor(.red)
-//                        Image(systemName: "trash")
-//                            .foregroundColor(.white)
-//                            .font(.title2.bold())
-//                            .layoutPriority(-1)
-//                    }.frame(width: -offset.width)
-//                    .offset(x: geometry.size.width)
-//                    .onAppear {
-//                        contentWidth = geometry.size.width
-//                    }
-//                    .gesture(
-//                        TapGesture()
-//                            .onEnded {
-//                                delete()
-//                            }
-//                    )
-//                }
-//            )
-//            .offset(x: offset.width, y: 0)
-//            .gesture (
-//                DragGesture()
-//                    .onChanged { gesture in
-//                        if gesture.translation.width + initialOffset.width <= 0 {
-//                            self.offset.width = gesture.translation.width + initialOffset.width
-//                        }
-//                        if self.offset.width < -deletionDistance && !willDeleteIfReleased {
-//                            hapticFeedback()
-//                            willDeleteIfReleased.toggle()
-//                        } else if offset.width > -deletionDistance && willDeleteIfReleased {
-//                            hapticFeedback()
-//                            willDeleteIfReleased.toggle()
-//                        }
-//                    }
-//                    .onEnded { _ in
-//                        if offset.width < -deletionDistance {
-//                            delete()
-//                        } else if offset.width < -halfDeletionDistance {
-//                            offset.width = -tappableDeletionWidth
-//                            initialOffset.width = -tappableDeletionWidth
-//                        } else {
-//                            offset = .zero
-//                            initialOffset = .zero
-//                        }
-//                    }
-//            )
-//            .animation(.interactiveSpring())
-//    }
-//
-//    private func delete() {
-//        offset.width = -contentWidth
-//        action()
-//    }
-//
-//    private func hapticFeedback() {
-//        let generator = UIImpactFeedbackGenerator(style: .medium)
-//        generator.impactOccurred()
-//    }
-//
-//    //MARK: Constants
-//
-//    let deletionDistance = CGFloat(200)
-//    let halfDeletionDistance = CGFloat(50)
-//    let tappableDeletionWidth = CGFloat(100)
-//
-//
-//}
-//
-//extension View {
-//
-//    func onDelete(perform action: @escaping () -> Void) -> some View {
-//        self.modifier(Delete(action: action))
-//    }
-//
-//}

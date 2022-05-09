@@ -42,7 +42,6 @@ struct MainView: View {
                         MedicineRecord()
                     }
                 })
-                               
                 .onTapGesture {
                     hideKeyboard()
                 }

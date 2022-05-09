@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecordingData {
     let fileURL: URL
-    let createAt: Date
+    let createdAt: Date
     
     
 }

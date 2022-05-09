@@ -39,9 +39,7 @@ struct EmergencyTabView: View {
                         Text("사진")
                     }.tag(Tabs.photo)
                 
-                ThirdView(audioRecorder: AudioRecorder())
-                    .padding(.horizontal, 20)
-
+                ThirdView()
                     .tabItem{
                         Image(systemName: "waveform")
                         Text("녹음")

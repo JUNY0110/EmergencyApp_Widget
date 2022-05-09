@@ -15,8 +15,14 @@ import AVFoundation
 
 
 class AudioRecorder: NSObject, ObservableObject {
-
+    
+    override init() {
+        super.init()
+        fetchRecording()
+    }
+    
     let objectWillChange = PassthroughSubject<AudioRecorder, Never>()
+
     var audioRecorder: AVAudioRecorder!
     
     var recordings = [RecordingData]()
@@ -38,14 +44,14 @@ class AudioRecorder: NSObject, ObservableObject {
         }
         
         let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let audioFilename = documentPath.appendingPathComponent("\(Date().toString(dateFormat: "dd-MM-YY_'at'_HH:mm:ss")).m4a")
+        let audioFilename = documentPath.appendingPathComponent("\(Date().toString(dateFormat: "HH:mm")).m4a")
 
         let settings = [
-                  AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-                  AVSampleRateKey: 12000,
-                  AVNumberOfChannelsKey: 1,
-                  AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-              ]
+              AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+              AVSampleRateKey: 12000,
+              AVNumberOfChannelsKey: 1,
+              AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+          ]
         do {
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             audioRecorder.record()
@@ -59,8 +65,7 @@ class AudioRecorder: NSObject, ObservableObject {
         audioRecorder.stop()
         recording = false
         
-        fetchRecording()
-        }
+        fetchRecording()        }
     
     func fetchRecording() {
         recordings.removeAll()
@@ -68,60 +73,49 @@ class AudioRecorder: NSObject, ObservableObject {
         let fileManager = FileManager.default
         let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let directoryContents = try! fileManager.contentsOfDirectory(at: documentDirectory, includingPropertiesForKeys: nil)
-
-        for audio in directoryContents{
-            let recording = RecordingData(fileURL: audio, createAt: getCreationDate(for: audio))
-            recordings.append(recording)
-            recordings.sort(by: {$0.createAt.compare($1.createAt) == .orderedAscending})
-            objectWillChange.send(self)
-        }
-        recordings.sort(by: { $0.createAt.compare($1.createAt) == .orderedAscending})
         
+        for audio in directoryContents {
+            let recording = RecordingData(fileURL: audio, createdAt: getCreationDate(for: audio))
+            recordings.append(recording)
+        }
+        recordings.sort(by: { $0.createdAt.compare($1.createdAt) == .orderedAscending})
         objectWillChange.send(self)
     }
     
-//    func delete(at offsets: IndexSet) {
-//        var urlsToDelete = [URL]()
-//        for index in offsets {
-//            urlsToDelete.append(recordings[index].fileURL)
-//            }
-//        }
-//    
-    func deleteRecording(urlsToDelete: [URL]) {
-            
-            for url in urlsToDelete {
-                print(url)
-                do {
-                   try FileManager.default.removeItem(at: url)
-                } catch {
-                    print("File could not be deleted!")
-                }
-            }
-            fetchRecording()
-            
-        }
     
-    override init() {
-        super.init()
-        print("class init")
+    func deleteRecording(urlsToDelete: [URL]) {
+        
+        for url in urlsToDelete {
+            print(url)
+            do {
+               try FileManager.default.removeItem(at: url)
+            } catch {
+                print("File could not be deleted!")
+            }
+        }
         fetchRecording()
     }
 }
-    
-    func getCreationDate(for file: URL) -> Date {
-        if let attributes = try? FileManager.default.attributesOfItem(atPath: file.path) as [FileAttributeKey: Any],
-        
-            let creationDate = attributes[FileAttributeKey.creationDate] as? Date{
-            return creationDate
-        } else {
-            return Date()
-        }
-    }
 
-extension Date{
-    func toString(dateFormat format: String) -> String{
+    
+func getCreationDate(for file: URL) -> Date {
+    if let attributes = try? FileManager.default.attributesOfItem(atPath: file.path) as [FileAttributeKey: Any],
+    
+        let creationDate = attributes[FileAttributeKey.creationDate] as? Date{
+        return creationDate
+    } else {
+        return Date()
+    }
+}
+
+
+extension Date
+{
+    func toString( dateFormat format  : String ) -> String
+    {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
+
 }

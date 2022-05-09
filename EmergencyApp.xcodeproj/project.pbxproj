@@ -14,7 +14,6 @@
 		980B2F3A2820C53100054AFE /* RecordingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F392820C53100054AFE /* RecordingData.swift */; };
 		980B2F40282195EA00054AFE /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F3F282195E900054AFE /* AudioPlayer.swift */; };
 		980B2F522826382F00054AFE /* RecordingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F512826382F00054AFE /* RecordingRow.swift */; };
-		980B2F5428263A2100054AFE /* Recordingbtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F5328263A2100054AFE /* Recordingbtn.swift */; };
 		980B2F5628264D1600054AFE /* CameraTopBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F5528264D1600054AFE /* CameraTopBtn.swift */; };
 		980B2F5828264DDE00054AFE /* CameraBottomBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F5728264DDE00054AFE /* CameraBottomBtn.swift */; };
 		9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4922817DFA000E0CD42 /* EmergencyAppApp.swift */; };
@@ -100,7 +99,6 @@
 		980B2F4728239E2500054AFE /* EmergencyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmergencyApp.entitlements; sourceTree = "<group>"; };
 		980B2F482823B7D500054AFE /* EmergencyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmergencyWidgetExtension.entitlements; sourceTree = "<group>"; };
 		980B2F512826382F00054AFE /* RecordingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingRow.swift; sourceTree = "<group>"; };
-		980B2F5328263A2100054AFE /* Recordingbtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recordingbtn.swift; sourceTree = "<group>"; };
 		980B2F5528264D1600054AFE /* CameraTopBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTopBtn.swift; sourceTree = "<group>"; };
 		980B2F5728264DDE00054AFE /* CameraBottomBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBottomBtn.swift; sourceTree = "<group>"; };
 		9818D48F2817DFA000E0CD42 /* EmergencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				980B2F37281FF73600054AFE /* RecordingList.swift */,
-				980B2F5328263A2100054AFE /* Recordingbtn.swift */,
 				980B2F512826382F00054AFE /* RecordingRow.swift */,
 			);
 			path = View;
@@ -557,7 +554,6 @@
 				9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */,
 				98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */,
 				980B2F5828264DDE00054AFE /* CameraBottomBtn.swift in Sources */,
-				980B2F5428263A2100054AFE /* Recordingbtn.swift in Sources */,
 				98F4BFCF281CE49600FAF0E5 /* ForthView.swift in Sources */,
 				9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */,
 				9818D4EE2818EDCE00E0CD42 /* EmergencyContact.swift in Sources */,
