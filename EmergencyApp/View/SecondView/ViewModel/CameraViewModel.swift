@@ -12,7 +12,9 @@ import Combine
 class CameraViewModel: ObservableObject {
     private let model: Camera
     private let session: AVCaptureSession
+    
     private var isCameraBusy = false
+    
     let cameraPreview: AnyView
     let hapticImpact = UIImpactFeedbackGenerator()
     
@@ -22,7 +24,6 @@ class CameraViewModel: ObservableObject {
     private var subscriptions = Set<AnyCancellable>()
     
     @Published var shutterEffect = false
-
     @Published var recentImage: UIImage?
     @Published var isFlashOn = false
     @Published var isSilentModeOn = false
@@ -54,7 +55,6 @@ class CameraViewModel: ObservableObject {
             }
         } else {
             print("[CameraViewModel]: Camera's busy.")
-
         }
     }
 

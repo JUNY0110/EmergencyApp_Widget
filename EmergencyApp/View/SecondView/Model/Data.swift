@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-extension Color {
-    static let LaunchRed: Color = Color(red: 255/255, green: 106/255, blue: 95/255)
-}
 
 struct MedicineRecordData: Identifiable, Hashable {
     var id = UUID()
