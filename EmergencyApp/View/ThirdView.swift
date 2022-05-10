@@ -15,6 +15,7 @@ struct ThirdView: View {
 
         VStack{
             RecordingList(audioRecorder: AudioRecorder())
+            
         }
     }
 }

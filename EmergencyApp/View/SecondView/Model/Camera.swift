@@ -54,6 +54,7 @@ class Camera: NSObject, ObservableObject {
             print("Permession declined")
         }
     }
+    
     func capturePhoto() {
             let photoSettings = AVCapturePhotoSettings()
             
@@ -68,6 +69,7 @@ class Camera: NSObject, ObservableObject {
         
         print("[Camera]: Photo's saved")
     }
+    
     func zoom(_ zoom: CGFloat){
          let factor = zoom < 1 ? 1 : zoom
          let device = self.videoDeviceInput.device
@@ -94,6 +96,7 @@ extension Camera: AVCapturePhotoCaptureDelegate {
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+
         guard let imageData = photo.fileDataRepresentation() else { return }
         
         self.recentImage = UIImage(data: imageData)

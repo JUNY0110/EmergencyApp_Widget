@@ -31,7 +31,6 @@
 		9818D4CE2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4C92817E00300E0CD42 /* EmergencyWidget.intentdefinition */; };
 		9818D4D12817E00400E0CD42 /* EmergencyWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9818D4C02817E00200E0CD42 /* EmergencyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9818D4D72818103B00E0CD42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4D62818103B00E0CD42 /* MainView.swift */; };
-		9818D4DC28181C4300E0CD42 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4DB28181C4300E0CD42 /* Data.swift */; };
 		9818D4DE28181CE800E0CD42 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4DD28181CE800E0CD42 /* SecondView.swift */; };
 		9818D4E42818EC8200E0CD42 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E32818EC8200E0CD42 /* ProfileImage.swift */; };
 		9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E52818ECB300E0CD42 /* NameField.swift */; };
@@ -44,6 +43,7 @@
 		9818D4F528192BDF00E0CD42 /* EmergencyTabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */; };
 		9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F828192E1500E0CD42 /* LaunchScreen.swift */; };
 		9818D4FC2819A49700E0CD42 /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */; };
+		986194F6282A3B4D0085A5BB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986194F5282A3B4D0085A5BB /* Data.swift */; };
 		98C428582829104D000C1C9B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C428572829104D000C1C9B /* Extensions.swift */; };
 		98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */; };
 		98F4BFC7281BDA8200FAF0E5 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */; };
@@ -120,7 +120,6 @@
 		9818D4CA2817E00400E0CD42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9818D4CC2817E00400E0CD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9818D4D62818103B00E0CD42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		9818D4DB28181C4300E0CD42 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9818D4DD28181CE800E0CD42 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		9818D4E32818EC8200E0CD42 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		9818D4E52818ECB300E0CD42 /* NameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameField.swift; sourceTree = "<group>"; };
@@ -134,6 +133,7 @@
 		9818D4F828192E1500E0CD42 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		9818D4FA2819A2AF00E0CD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
+		986194F5282A3B4D0085A5BB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		98C428572829104D000C1C9B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridView.swift; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		980B2F5B282693AF00054AFE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9818D4DB28181C4300E0CD42 /* Data.swift */,
+				986194F5282A3B4D0085A5BB /* Data.swift */,
 				98F4BFD0281E78BF00FAF0E5 /* Camera.swift */,
 				98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */,
 			);
@@ -546,7 +546,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9818D4DE28181CE800E0CD42 /* SecondView.swift in Sources */,
-				9818D4DC28181C4300E0CD42 /* Data.swift in Sources */,
 				980B2F38281FF73600054AFE /* RecordingList.swift in Sources */,
 				980B2F2F281EC30C00054AFE /* CameraViewModel.swift in Sources */,
 				980B2F522826382F00054AFE /* RecordingRow.swift in Sources */,
@@ -576,6 +575,7 @@
 				980B2F3A2820C53100054AFE /* RecordingData.swift in Sources */,
 				9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */,
 				9818D4E82818ECE200E0CD42 /* BirthPicker.swift in Sources */,
+				986194F6282A3B4D0085A5BB /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

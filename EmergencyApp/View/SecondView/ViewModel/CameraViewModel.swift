@@ -26,7 +26,8 @@ class CameraViewModel: ObservableObject {
     @Published var shutterEffect = false
     @Published var recentImage: UIImage?
     @Published var isFlashOn = false
-    @Published var isSilentModeOn = false
+//    @Published var isSilentModeOn = false
+
 
     func configure() {
         model.requestAndCheckPermissions()
@@ -36,9 +37,9 @@ class CameraViewModel: ObservableObject {
         isFlashOn.toggle()
     }
 
-    func switchSilent() {
-        isSilentModeOn.toggle()
-    }
+//    func switchSilent() {
+//        isSilentModeOn.toggle()
+//    }
 
     func capturePhoto() {
         if isCameraBusy == false {

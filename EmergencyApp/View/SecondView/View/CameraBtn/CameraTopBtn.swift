@@ -15,17 +15,17 @@ struct CameraTopBtn: View {
         HStack{
             Spacer()
 
-            Button(action: {
-                viewModel.switchSilent()
-            }) {
-                Image(systemName: viewModel.isSilentModeOn ? "speaker.fill" : "speaker")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor( viewModel.isSilentModeOn ? .yellow : .white)
-                    .frame(width: 20, height: 20)
-            }
-
-            Spacer()
+//            Button(action: {
+//                viewModel.switchSilent()
+//            }) {
+//                Image(systemName: viewModel.isSilentModeOn ? "speaker.fill" : "speaker")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .foregroundColor( viewModel.isSilentModeOn ? .yellow : .white)
+//                    .frame(width: 20, height: 20)
+//            }
+//
+//            Spacer()
 
             Button(action: {
                 viewModel.switchFlash()
