@@ -31,14 +31,16 @@ struct CameraBottomBtn: View {
             Spacer()
 
             Button(action: {
+                print("어쩌꼬")
                 viewModel.capturePhoto()
+                
             }) {
-
                 Circle()
                     .stroke(lineWidth: 3)
                     .frame(width: 50, height: 50)
             }
             Spacer()
+            
             Button(action: {
                 viewModel.changeCamera()
             }) {

@@ -7,14 +7,17 @@
 import SwiftUI
 import AVFoundation
 
-class Camera: NSObject, ObservableObject {
+class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
+    
     var session = AVCaptureSession()
     var videoDeviceInput: AVCaptureDeviceInput!
     let output = AVCapturePhotoOutput()
     var photoData = Data(count: 0)
+    
+    var flashMode: AVCaptureDevice.FlashMode = .off
+
     @Published var recentImage: UIImage?
-
-
+    
     func setUpCamera() {
         if let device = AVCaptureDevice.default(.builtInWideAngleCamera,
                                                 for: .video, position: .back) {
@@ -23,7 +26,7 @@ class Camera: NSObject, ObservableObject {
                 if session.canAddInput(videoDeviceInput) {
                     session.addInput(videoDeviceInput)
                 }
-                
+
                 if session.canAddOutput(output) {
                     session.addOutput(output)
                     output.isHighResolutionCaptureEnabled = true
@@ -54,19 +57,21 @@ class Camera: NSObject, ObservableObject {
             print("Permession declined")
         }
     }
-    
+
     func capturePhoto() {
-            let photoSettings = AVCapturePhotoSettings()
-            
-            self.output.capturePhoto(with: photoSettings, delegate: self)
-            print("[Camera]: Photo's taken")
+
+        print("어쩌꼬")
+
+        let photoSettings = AVCapturePhotoSettings()
+
+        self.output.capturePhoto(with: photoSettings, delegate: self)
+        print("[Camera]: Photo's taken")
         
     }
     
     func savePhoto(_ imageData: Data) {
         guard let image = UIImage(data: imageData) else { return }
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        
         print("[Camera]: Photo's saved")
     }
     
@@ -88,20 +93,20 @@ class Camera: NSObject, ObservableObject {
 extension Camera: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, willBeginCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
     }
-    
+
     func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
     }
-    
+
     func photoOutput(_ output: AVCapturePhotoOutput, didCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
     }
-    
+
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
 
         guard let imageData = photo.fileDataRepresentation() else { return }
-        
+
         self.recentImage = UIImage(data: imageData)
         self.savePhoto(imageData)
-        
+
         print("[CameraModel]: Capture routine's done")
     }
 }

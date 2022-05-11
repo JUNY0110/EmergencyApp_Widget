@@ -42,13 +42,17 @@ class CameraViewModel: ObservableObject {
 //    }
 
     func capturePhoto() {
+        model.capturePhoto()
+        print("[CameraViewModel]: Photo captured!")
+        
         if isCameraBusy == false {
-            model.capturePhoto()
-            print("[CameraViewModel]: Photo captured!")
+
+            
             hapticImpact.impactOccurred()
             withAnimation(.easeInOut(duration: 0.1)) {
                 shutterEffect = true
             }
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 withAnimation(.easeInOut(duration: 0.1)) {
                     self.shutterEffect = false

@@ -12,8 +12,6 @@ struct SecondView: View {
 
     @State private var showModal = false
     
-
-    
     var body: some View {
 
         VStack{
@@ -38,14 +36,11 @@ struct SecondView: View {
                 .background(Color.LaunchRed)
                 .foregroundColor(.white)
                 .cornerRadius(20)
-                
                 .padding(.bottom,10)
             }
             .fullScreenCover(isPresented: self.$showModal) {
                 CameraView()
             }
-            
-
         }
     }
 }
