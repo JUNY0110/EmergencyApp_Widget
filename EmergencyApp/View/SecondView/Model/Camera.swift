@@ -7,7 +7,7 @@
 import SwiftUI
 import AVFoundation
 
-class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
+class Camera: NSObject, ObservableObject {
     
     var session = AVCaptureSession()
     var videoDeviceInput: AVCaptureDeviceInput!

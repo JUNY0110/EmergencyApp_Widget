@@ -12,7 +12,7 @@ struct EmergencyAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmergencyTabView()
         }
     }
 }
