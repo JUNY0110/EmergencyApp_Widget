@@ -15,35 +15,36 @@ struct ProfileImage: View {
     
     var body: some View {
 
-        
-        
             Button(action: {
                 print("dd")
+                changeProfileImage = true
+                openCameraRoll = true
             }) {
-
-                ZStack{
-                    Circle()
-                        .foregroundColor(.white)
-                        .aspectRatio(contentMode: .fit)
+                if changeProfileImage{
+                    Image(uiImage: imageSelected)
+                        .resizable()
                         .frame(width: 120, height: 120)
-                        .shadow(color: .gray, radius: 3, x: 2, y: 2)
-                    Image(systemName: "plus")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.gray)
-                    .clipShape(Circle())
+                        .clipShape(Circle())
+                }else{
+                    ZStack{
+                        Circle()
+                            .foregroundColor(.white)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 120, height: 120)
+                            .shadow(color: .gray, radius: 3, x: 2, y: 2)
+                        Image(systemName: "plus")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.gray)
+                            .clipShape(Circle())
+                    }
                 }
 
                 
+            }.sheet(isPresented: $openCameraRoll) {
+                ImagePicker(selectedImage: $imageSelected, sourceType: .camera)
             }
-//                Image("Profile")
-//            .resizable()
-//            .aspectRatio(contentMode: .fit)
-//            .clipShape(Circle())
-//            .frame(width: 150, height: 150)
-//            .shadow(color: .gray, radius: 5, x: 3, y: 3)
-        
     }
 }
 
