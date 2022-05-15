@@ -44,7 +44,20 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
+        
     }
+//
+//    func didTapButton() {
+//        if let image = self.selectedImage {
+//            upload(image)
+//        } else {
+//            shouldShowImagePicker.toggle()
+//        }
+//    }
+//
+//    func upload(_ image: UIImage) {
+//        guard let imageData = image.jpegData(compressionQuality: 8.5) else {return}
+//    }
 }
 
 

@@ -51,6 +51,7 @@
 		98F4BFD1281E78BF00FAF0E5 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFD0281E78BF00FAF0E5 /* Camera.swift */; };
 		98F4BFD4281E7C0000FAF0E5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */; };
 		98F6588C282D3F3B00CC655D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F6588B282D3F3B00CC655D /* ImagePicker.swift */; };
+		98F658922831561700CC655D /* PhotoLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F658912831561700CC655D /* PhotoLibraryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		98F4BFCE281CE49600FAF0E5 /* ForthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthView.swift; sourceTree = "<group>"; };
 		98F4BFD0281E78BF00FAF0E5 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		98F6588B282D3F3B00CC655D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		98F658912831561700CC655D /* PhotoLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 		980B2F5D282693DF00054AFE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				98F658912831561700CC655D /* PhotoLibraryView.swift */,
 				98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */,
 				98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */,
 				980B2F5928264EF400054AFE /* CameraBtn */,
@@ -572,6 +575,7 @@
 				9818D4D72818103B00E0CD42 /* MainView.swift in Sources */,
 				9818D4EA2818ED4A00E0CD42 /* BloodTypePicker.swift in Sources */,
 				980B2F40282195EA00054AFE /* AudioPlayer.swift in Sources */,
+				98F658922831561700CC655D /* PhotoLibraryView.swift in Sources */,
 				98F4BFD4281E7C0000FAF0E5 /* CameraView.swift in Sources */,
 				980B2F36281FF04C00054AFE /* ThirdView.swift in Sources */,
 				98F4BFD1281E78BF00FAF0E5 /* Camera.swift in Sources */,

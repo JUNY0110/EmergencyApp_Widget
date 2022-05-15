@@ -67,11 +67,8 @@ struct ProfileImage: View {
                 }
                 .fullScreenCover(isPresented: $showImagePicker) {
                     ImagePicker(selectedImage: $imageSelected, sourceType: self.sourceType)
-            
                 }
-    
         }
-
     }
 }
 

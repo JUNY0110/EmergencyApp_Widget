@@ -83,6 +83,7 @@ class AudioRecorder: NSObject, ObservableObject {
     }
     
     
+    
     func deleteRecording(urlsToDelete: [URL]) {
         
         for url in urlsToDelete {
