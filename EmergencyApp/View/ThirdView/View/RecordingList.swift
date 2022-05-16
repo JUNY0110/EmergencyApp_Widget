@@ -31,6 +31,7 @@ struct RecordingList: View {
             .frame(width: 390, height: 550)
         
         if audioRecorder.recording == false {
+            
         
             Button(action: {
             
@@ -65,7 +66,7 @@ struct RecordingList: View {
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(20)
-            .padding(.horizontal)
+//            .padding(.horizontal)
             .padding(.bottom,10)
         }
     }

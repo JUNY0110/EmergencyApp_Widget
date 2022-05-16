@@ -30,6 +30,8 @@ struct PhotoLibraryView: View {
         GridItem(.flexible(), spacing: nil, alignment: nil),
         GridItem(.flexible(), spacing: nil, alignment: nil)
     ]
+    
+    
     var body: some View {
 
         VStack{
@@ -66,7 +68,7 @@ struct PhotoLibraryView: View {
                 }
                 
             })
-            .frame(width: .infinity, height: 550)
+//            .frame(width: .infinity, height: 550)
             
             
             Button(action:{
