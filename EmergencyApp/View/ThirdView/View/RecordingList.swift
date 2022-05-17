@@ -32,7 +32,6 @@ struct RecordingList: View {
         
         if audioRecorder.recording == false {
             
-        
             Button(action: {
             
                 self.audioRecorder.startRecording()

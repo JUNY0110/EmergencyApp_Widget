@@ -60,8 +60,6 @@ class Camera: NSObject, ObservableObject {
 
     func capturePhoto() {
 
-        print("어쩌꼬")
-
         let photoSettings = AVCapturePhotoSettings()
 
         self.output.capturePhoto(with: photoSettings, delegate: self)
