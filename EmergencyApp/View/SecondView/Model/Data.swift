@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Foundation
 
 struct MedicineRecordData: Identifiable, Hashable {
     var id = UUID()
@@ -15,9 +15,9 @@ struct MedicineRecordData: Identifiable, Hashable {
 }
 
 
-extension MedicineRecordDatas = {
+extension MedicineRecordData {
     
-    func all() -> [MedicineRecordData] {
+    static func all() -> [MedicineRecordData] {
         return [
             MedicineRecordData(image: "Image1"),
             MedicineRecordData(image: "Image2"),

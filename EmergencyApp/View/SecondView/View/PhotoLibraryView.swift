@@ -21,7 +21,7 @@ struct PhotoLibraryView: View {
 
     
 //    @ObservedObject var medical: MedicineRecordData
-    let pills = medicineRecordData.pills(into: 2)
+    let pills = MedicineRecordData.all()
     
     static let dateformat: DateFormatter = {
           let formatter = DateFormatter()
@@ -40,30 +40,25 @@ struct PhotoLibraryView: View {
     
     var body: some View {
 
+        //columns갯수를 정하기 위한 설정
+        let medicinePills = pills.pills(into: 2)
         
-        
-        
-//        List{
-            //medicineRecordData의 데이터갯수만큼 인덱스를 넣어주고,
-//            ForEach(0..<4) { medical in
-//                HStack{
-                    // 내부 Foreach에 Column갯수로 사용할
-                    ForEach(0..<pills.count) { columns in
-                        HStack{
-                            ForEach(pills[columns]) { row in
-                            
-                                Image(row.image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-//                                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
-                                
-                            }
-                            
-                        }
+        return List {
+
+            ForEach(0..<medicinePills.count) { columns in
+                HStack{
+                    ForEach(medicinePills[columns]) { row in
+
+                        Image(row.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 130, height: 130)
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
+                            .cornerRadius(10)
                     }
-//                }
-//            }
-//        }
+                }
+            }
+        }
     }
         
 //        List{
