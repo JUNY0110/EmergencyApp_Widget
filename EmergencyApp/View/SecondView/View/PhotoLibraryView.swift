@@ -20,6 +20,9 @@ struct PhotoLibraryView: View {
 //    @ObservedObject var audioRecorder: AudioRecorder
 
     
+//    @ObservedObject var medical: MedicineRecordData
+    let pills = medicineRecordData.pills(into: 2)
+    
     static let dateformat: DateFormatter = {
           let formatter = DateFormatter()
            formatter.dateFormat = "YYYY년 MM월 dd일"
@@ -37,25 +40,51 @@ struct PhotoLibraryView: View {
     
     var body: some View {
 
-        List{
-            
-            
-            ForEach(0..< Data.MedicineRecordData/4){ row in
-                HStack{
-                    ForEach(0..<2){
-                        // 기존의 데이터를 가져오지 않고, 사진을 찍으면 옮겨오는 방식..이 되어야함.
-                        // 사진촬영 기능에 대한 struct 또는 func을 넣어야함.
-                        columns in
-                        Image(medical.image)
-                        .resizable()
-//                        .frame(width: 170, height: 150)
-//                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
-                        .scaledToFill()
+        
+        
+        
+//        List{
+            //medicineRecordData의 데이터갯수만큼 인덱스를 넣어주고,
+//            ForEach(0..<4) { medical in
+//                HStack{
+                    // 내부 Foreach에 Column갯수로 사용할
+                    ForEach(0..<pills.count) { columns in
+                        HStack{
+                            ForEach(pills[columns]) { row in
+                            
+                                Image(row.image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+//                                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
+                                
+                            }
+                            
+                        }
                     }
-                }
-            }
-        }
+//                }
+//            }
+//        }
     }
+        
+//        List{
+//            
+//            
+//            ForEach(0..< Data.MedicineRecordData/4){ row in
+//                HStack{
+//                    ForEach(0..<2){
+//                        // 기존의 데이터를 가져오지 않고, 사진을 찍으면 옮겨오는 방식..이 되어야함.
+//                        // 사진촬영 기능에 대한 struct 또는 func을 넣어야함.
+//                        columns in
+//                        Image(medical.image)
+//                        .resizable()
+////                        .frame(width: 170, height: 150)
+////                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
+//                        .scaledToFill()
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
             
             

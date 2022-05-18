@@ -27,26 +27,44 @@ struct LazyVGridView: View {
     ]
     
     var body: some View {
-            
-        List{
-            Section(
-                header: Text("\(Date(), formatter: LazyVGridView.dateformat)")
-                    .font(.system(size: 25, weight: .bold, design: .rounded))
-            ){
-                ForEach(medicineRecordData, id: \.self){  // 기존의 데이터를 가져오지 않고, 사진을 찍으면 옮겨오는 방식..이 되어야함.
-                medical in
-                Image(medical.image)
-                    .resizable()
-                    .frame(width: 170, height: 150)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
-                    .scaledToFill()
+       
+        
+        ForEach(medicineRecordData.indices, id:\.self) { _ in
+            HStack{
+                ForEach(0..<2) {_ in
+                    Rectangle()
+                    
                 }
             }
+//            HStack{
+//                ForEach(0..<6) {_ in
+//
+//                }
+//            }
+            
+        }
+        
+        
+        
+//        List{
+//            Section(
+//                header: Text("\(Date(), formatter: LazyVGridView.dateformat)")
+//                    .font(.system(size: 25, weight: .bold, design: .rounded))
+//            ){
+//                ForEach(medicineRecordData, id: \.self){  // 기존의 데이터를 가져오지 않고, 사진을 찍으면 옮겨오는 방식..이 되어야함.
+//                medical in
+//                Image(medical.image)
+//                    .resizable()
+//                    .frame(width: 170, height: 150)
+//                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
+//                    .scaledToFill()
+//                }
+//            }
 //            ForEach(
 //                audioRecorder.recordings, id: \.createdAt) {recording in
 //                RecordingRow(audioURL: recording.fileURL)
 //            }
-        }
+//        }
             .listStyle(GroupedListStyle())
             .colorMultiply(.white)
             .frame(width: 390, height: 550)
