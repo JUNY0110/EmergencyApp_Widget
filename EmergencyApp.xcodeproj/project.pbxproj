@@ -230,6 +230,7 @@
 		980B2F5D282693DF00054AFE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				98F6588B282D3F3B00CC655D /* ImagePicker.swift */,
 				98F658912831561700CC655D /* PhotoLibraryView.swift */,
 				98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */,
 				98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */,
@@ -336,7 +337,6 @@
 			isa = PBXGroup;
 			children = (
 				9818D4E32818EC8200E0CD42 /* ProfileImage.swift */,
-				98F6588B282D3F3B00CC655D /* ImagePicker.swift */,
 				9818D4E52818ECB300E0CD42 /* NameField.swift */,
 				9818D4E72818ECE200E0CD42 /* BirthPicker.swift */,
 				9818D4E92818ED4A00E0CD42 /* BloodTypePicker.swift */,

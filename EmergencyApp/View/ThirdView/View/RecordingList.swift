@@ -16,7 +16,7 @@ struct RecordingList: View {
 
         List{
             Section(
-                header: Text("\(Date(), formatter: LazyVGridView.dateformat)")
+                header: Text("\(Date(), formatter: PhotoLibraryView.dateformat)")
                     .font(.system(size: 25, weight: .bold, design: .rounded))
             ){
                 ForEach(

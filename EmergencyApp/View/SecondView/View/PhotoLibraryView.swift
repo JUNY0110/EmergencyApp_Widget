@@ -15,6 +15,10 @@ struct PhotoLibraryView: View {
     @State var imageSelected = UIImage()
     @State var showSheet = false
     @State var sourceType: UIImagePickerController.SourceType = .camera
+    
+    @State private var inputImage: UIImage?
+    @State private var image: Image?
+    
 //    @State var image: UIImage?
     
 //    @ObservedObject var audioRecorder: AudioRecorder
@@ -42,24 +46,87 @@ struct PhotoLibraryView: View {
 
         //columns갯수를 정하기 위한 설정
         let medicinePills = pills.pills(into: 2)
-        
-        return List {
+//        let selectedImage =
+        VStack{
+     
+//        List {
 
-            ForEach(0..<medicinePills.count) { columns in
-                HStack{
-                    ForEach(medicinePills[columns]) { row in
+            ScrollView{
+                Section(
+                    header: Text("\(Date(), formatter: PhotoLibraryView.dateformat)")
+                        .font(.system(size: 25, weight: .bold, design: .rounded))
+                ){
+                ForEach(0..<medicinePills.count) { columns in
+                    HStack{
+                        ForEach(medicinePills[columns]) { row in
 
-                        Image(row.image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 130, height: 130)
-                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
-                            .cornerRadius(10)
+                            //imageSelected 사용하면 될듯?? imagePicker를 활용해보자.
+                            Image(row.image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 170, height: 170)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
+                        }
+
+                        }
                     }
                 }
             }
+            
+            Button(action:{
+                self.showSheet = true
+            }) {
+                HStack{
+                    Image(systemName: "camera.fill")
+                    Text("사진촬영")
+                        .font(.system(size: 20, weight: .regular))
+                }
+                .frame(width: 350, height: 40)
+                .background(Color.LaunchRed)
+                .foregroundColor(.white)
+                .cornerRadius(20)
+                .padding(.bottom,10)
+
+            }
+            .actionSheet(isPresented: $showSheet) {
+
+
+                ActionSheet(title: Text("사진 앨범"), message: Text("선택하세요."), buttons: [
+
+                    .default(Text("사진 선택")){
+                        self.showImagePicker = true
+                        self.sourceType = .photoLibrary
+                },
+                    .default(Text("사진 촬영")) {
+
+                        self.showImagePicker = true
+                        self.sourceType = .camera
+                    },
+                        .cancel(Text("취소"))
+
+                ])
+                
+            }
+//            .onChange(of: inputImage) { _ in loadImage()}
+            .fullScreenCover(isPresented: $showImagePicker) {
+                ImagePicker(selectedImage: $imageSelected, sourceType: self.sourceType)
+            }
+ 
         }
     }
+    func loadImage() {
+        guard let inputImage = inputImage else {
+            return
+        }
+        image = Image(uiImage: inputImage)
+
+    }
+    
+    func save() {
+        
+    }
+}
         
 //        List{
 //            
@@ -80,7 +147,7 @@ struct PhotoLibraryView: View {
 //            }
 //        }
 //    }
-}
+
             
             
             
@@ -135,6 +202,7 @@ struct PhotoLibraryView: View {
 //
 //
 //            ActionSheet(title: Text("사진 앨범"), message: Text("선택하세요."), buttons: [
+//
 //                .default(Text("사진 선택")){
 //                    self.showImagePicker = true
 //                    self.sourceType = .photoLibrary
@@ -153,7 +221,8 @@ struct PhotoLibraryView: View {
 //            ImagePicker(selectedImage: $imageSelected, sourceType: self.sourceType)
 //        }
 //    }
-//}
+
+
         
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
