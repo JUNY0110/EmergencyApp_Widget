@@ -19,12 +19,11 @@ struct PhotoLibraryView: View {
     @State private var inputImage: UIImage?
     @State private var image: Image?
     
-//    @State var image: UIImage?
-    
-//    @ObservedObject var audioRecorder: AudioRecorder
+    private var url: URL {
+            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            return paths[0].appendingPathComponent("image.jpg")
+    }
 
-    
-//    @ObservedObject var medical: MedicineRecordData
     let pills = MedicineRecordData.all()
     
     static let dateformat: DateFormatter = {
@@ -46,7 +45,6 @@ struct PhotoLibraryView: View {
 
         //columns갯수를 정하기 위한 설정
         let medicinePills = pills.pills(into: 2)
-//        let selectedImage =
         VStack{
      
 //        List {
@@ -136,6 +134,7 @@ extension URL {
             image = nil
         }
     }
+    
     func saveImage(_ image: UIImage?) {
         if let image = image {
             if let data = image.jpegData(compressionQuality: 1.0) {
