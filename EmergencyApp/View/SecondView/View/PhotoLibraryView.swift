@@ -8,9 +8,29 @@
 import SwiftUI
 
 
+extension URL {
+    func loadImage(_ image: inout UIImage?) {
+        if let data = try? Data(contentsOf: self), let loaded = UIImage(data: data) {
+            image = loaded
+        } else {
+            image = nil
+        }
+    }
+    
+    func saveImage(_ image: UIImage?) {
+        if let image = image {
+            if let data = image.jpegData(compressionQuality: 1.0) {
+                try? data.write(to: self)
+            }
+        } else {
+            try? FileManager.default.removeItem(at: self)
+        }
+    }
+}
+
 struct PhotoLibraryView: View {
-    @State private var showModal = false
-    @State var shouldShowImagePicker = false
+//    @State private var showModal = false
+//    @State var shouldShowImagePicker = false
     @State var showImagePicker = false
     @State var imageSelected = UIImage()
     @State var showSheet = false
@@ -19,10 +39,10 @@ struct PhotoLibraryView: View {
     @State private var inputImage: UIImage?
     @State private var image: Image?
     
-    private var url: URL {
-            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-            return paths[0].appendingPathComponent("image.jpg")
-    }
+//    private var url: URL {
+//            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//            return paths[0].appendingPathComponent("image.jpg")
+//    }
 
     let pills = MedicineRecordData.all()
     
@@ -102,9 +122,7 @@ struct PhotoLibraryView: View {
                         self.sourceType = .camera
                     },
                         .cancel(Text("취소"))
-
                 ])
-                
             }
 //            .onChange(of: inputImage) { _ in loadImage()}
             .fullScreenCover(isPresented: $showImagePicker) {
@@ -113,38 +131,9 @@ struct PhotoLibraryView: View {
  
         }
     }
-//    func loadImage() {
-//        guard let inputImage = inputImage else {
-//            return
-//        }
-//        image = Image(uiImage: inputImage)
-//
-//    }
-//
-//    func save() {
-//
-//    }
 }
 
-extension URL {
-    func loadImage(_ image: inout UIImage?) {
-        if let data = try? Data(contentsOf: self), let loaded = UIImage(data: data) {
-            image = loaded
-        } else {
-            image = nil
-        }
-    }
-    
-    func saveImage(_ image: UIImage?) {
-        if let image = image {
-            if let data = image.jpegData(compressionQuality: 1.0) {
-                try? data.write(to: self)
-            }
-        } else {
-            try? FileManager.default.removeItem(at: self)
-        }
-    }
-}
+
         
 //        List{
 //            
