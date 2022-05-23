@@ -45,6 +45,7 @@
 		9818D4FC2819A49700E0CD42 /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */; };
 		986194F6282A3B4D0085A5BB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986194F5282A3B4D0085A5BB /* Data.swift */; };
 		98C428582829104D000C1C9B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C428572829104D000C1C9B /* Extensions.swift */; };
+		98EC6EDB283BF03400384D73 /* SaveNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6EDA283BF03400384D73 /* SaveNameView.swift */; };
 		98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */; };
 		98F4BFC7281BDA8200FAF0E5 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */; };
 		98F4BFCF281CE49600FAF0E5 /* ForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFCE281CE49600FAF0E5 /* ForthView.swift */; };
@@ -138,6 +139,7 @@
 		9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
 		986194F5282A3B4D0085A5BB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		98C428572829104D000C1C9B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		98EC6EDA283BF03400384D73 /* SaveNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNameView.swift; sourceTree = "<group>"; };
 		98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridView.swift; sourceTree = "<group>"; };
 		98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				9818D4E32818EC8200E0CD42 /* ProfileImage.swift */,
+				98EC6EDA283BF03400384D73 /* SaveNameView.swift */,
 				9818D4E52818ECB300E0CD42 /* NameField.swift */,
 				9818D4E72818ECE200E0CD42 /* BirthPicker.swift */,
 				9818D4E92818ED4A00E0CD42 /* BloodTypePicker.swift */,
@@ -567,6 +570,7 @@
 				980B2F5828264DDE00054AFE /* CameraBottomBtn.swift in Sources */,
 				98F658962833787600CC655D /* CameraListRow.swift in Sources */,
 				98F4BFCF281CE49600FAF0E5 /* ForthView.swift in Sources */,
+				98EC6EDB283BF03400384D73 /* SaveNameView.swift in Sources */,
 				9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */,
 				98F6588C282D3F3B00CC655D /* ImagePicker.swift in Sources */,
 				9818D4EE2818EDCE00E0CD42 /* EmergencyContact.swift in Sources */,

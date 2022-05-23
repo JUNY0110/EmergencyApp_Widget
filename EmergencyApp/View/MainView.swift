@@ -10,13 +10,15 @@ import SwiftUI
 struct MainView: View {
 
 
+    
     var body: some View {
+        
         VStack {
             ScrollView(.vertical, showsIndicators: false, content: {
                 Group {
                     ProfileImage()
                     
-//                    NameField()
+                    SaveNameView()
                     
                     BirthPicker()
                     Divider()
@@ -43,8 +45,10 @@ struct MainView: View {
             })
             .onTapGesture {
                 hideKeyboard()
+                
             }
         }
+        
     }
 }
 

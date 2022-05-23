@@ -17,6 +17,7 @@ enum Tabs: String {
 struct EmergencyTabView: View {
 
     @State var selection: Tabs = .info
+//    @Binding var name: String = ""
     
     var body: some View {
         NavigationView{
@@ -30,6 +31,7 @@ struct EmergencyTabView: View {
                         Text("의료정보")
                         
                     }.tag(Tabs.info)
+                
                 
                 SecondView()
                     .padding(.horizontal, 20)
@@ -54,12 +56,7 @@ struct EmergencyTabView: View {
                     }.tag(Tabs.widget)
             }
             .navigationBarTitle(selection.rawValue, displayMode: .large)
-            .toolbar{
-                ToolbarItem(placement: .automatic) {
-                    Button("저장"){
-                        print("저장")}
-                }
-            }
+             
         }
     }
 }
