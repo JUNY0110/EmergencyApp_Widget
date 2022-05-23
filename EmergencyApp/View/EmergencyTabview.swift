@@ -54,6 +54,12 @@ struct EmergencyTabView: View {
                     }.tag(Tabs.widget)
             }
             .navigationBarTitle(selection.rawValue, displayMode: .large)
+            .toolbar{
+                ToolbarItem(placement: .automatic) {
+                    Button("저장"){
+                        print("저장")}
+                }
+            }
         }
     }
 }

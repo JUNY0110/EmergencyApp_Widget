@@ -48,6 +48,7 @@ struct ProfileImage: View {
                     }
                 }
                 .actionSheet(isPresented: $showSheet) {
+                    //confirmation dialog
             
                     
                     ActionSheet(title: Text("사진 앨범"), message: Text("선택하세요."), buttons: [

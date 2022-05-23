@@ -11,11 +11,10 @@ struct NameField: View {
 
     @State private var name: String = ""
 
-    
+
     func sayHello(name:String) {
-        print("안녕\(name)")
     }
-    
+
     var body: some View {
         VStack{
             HStack{
@@ -27,12 +26,8 @@ struct NameField: View {
                     .multilineTextAlignment(.trailing)
                     .submitLabel(.done)
             }
-            
             Divider()
-
         }
-
-
     }
 }
 

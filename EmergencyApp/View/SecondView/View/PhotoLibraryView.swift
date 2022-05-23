@@ -77,7 +77,6 @@ struct PhotoLibraryView: View {
                 ForEach(0..<medicinePills.count) { columns in
                     HStack{
                         ForEach(medicinePills[columns]) { row in
-
                             //imageSelected 사용하면 될듯?? imagePicker를 활용해보자.
                             Image(row.image)
                                 .resizable()

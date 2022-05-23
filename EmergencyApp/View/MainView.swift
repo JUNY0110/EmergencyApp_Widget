@@ -16,7 +16,7 @@ struct MainView: View {
                 Group {
                     ProfileImage()
                     
-                    NameField()
+//                    NameField()
                     
                     BirthPicker()
                     Divider()
