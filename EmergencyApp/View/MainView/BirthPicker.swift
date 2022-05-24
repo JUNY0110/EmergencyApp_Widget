@@ -22,6 +22,7 @@ struct BirthPicker: View {
                 .foregroundColor(.black)
                 .labelsHidden()
         }
+        Divider()
     }
 }
 

@@ -33,20 +33,15 @@
 		9818D4D72818103B00E0CD42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4D62818103B00E0CD42 /* MainView.swift */; };
 		9818D4DE28181CE800E0CD42 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4DD28181CE800E0CD42 /* SecondView.swift */; };
 		9818D4E42818EC8200E0CD42 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E32818EC8200E0CD42 /* ProfileImage.swift */; };
-		9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E52818ECB300E0CD42 /* NameField.swift */; };
-		9818D4E82818ECE200E0CD42 /* BirthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E72818ECE200E0CD42 /* BirthPicker.swift */; };
-		9818D4EA2818ED4A00E0CD42 /* BloodTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4E92818ED4A00E0CD42 /* BloodTypePicker.swift */; };
 		9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4EB2818EDA200E0CD42 /* MedicalRecord.swift */; };
 		9818D4EE2818EDCE00E0CD42 /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4ED2818EDCE00E0CD42 /* EmergencyContact.swift */; };
-		9818D4F02818EDFA00E0CD42 /* SpareContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4EF2818EDFA00E0CD42 /* SpareContact.swift */; };
-		9818D4F3281916C300E0CD42 /* MedicineRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F2281916C300E0CD42 /* MedicineRecord.swift */; };
 		9818D4F528192BDF00E0CD42 /* EmergencyTabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */; };
 		9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4F828192E1500E0CD42 /* LaunchScreen.swift */; };
 		9818D4FC2819A49700E0CD42 /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */; };
 		986194F6282A3B4D0085A5BB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986194F5282A3B4D0085A5BB /* Data.swift */; };
 		98C428582829104D000C1C9B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C428572829104D000C1C9B /* Extensions.swift */; };
-		98EC6EDB283BF03400384D73 /* SaveNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6EDA283BF03400384D73 /* SaveNameView.swift */; };
-		98EC6EDE283CC12700384D73 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6EDD283CC12700384D73 /* TestView.swift */; };
+		98EC6EDB283BF03400384D73 /* SavePersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6EDA283BF03400384D73 /* SavePersonalInfo.swift */; };
+		98EC6EE0283D138C00384D73 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6EDF283D138C00384D73 /* PersonalInfo.swift */; };
 		98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */; };
 		98F4BFC7281BDA8200FAF0E5 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */; };
 		98F4BFCF281CE49600FAF0E5 /* ForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFCE281CE49600FAF0E5 /* ForthView.swift */; };
@@ -127,21 +122,16 @@
 		9818D4D62818103B00E0CD42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9818D4DD28181CE800E0CD42 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		9818D4E32818EC8200E0CD42 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
-		9818D4E52818ECB300E0CD42 /* NameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameField.swift; sourceTree = "<group>"; };
-		9818D4E72818ECE200E0CD42 /* BirthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthPicker.swift; sourceTree = "<group>"; };
-		9818D4E92818ED4A00E0CD42 /* BloodTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodTypePicker.swift; sourceTree = "<group>"; };
 		9818D4EB2818EDA200E0CD42 /* MedicalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecord.swift; sourceTree = "<group>"; };
 		9818D4ED2818EDCE00E0CD42 /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
-		9818D4EF2818EDFA00E0CD42 /* SpareContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpareContact.swift; sourceTree = "<group>"; };
-		9818D4F2281916C300E0CD42 /* MedicineRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineRecord.swift; sourceTree = "<group>"; };
 		9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyTabview.swift; sourceTree = "<group>"; };
 		9818D4F828192E1500E0CD42 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		9818D4FA2819A2AF00E0CD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
 		986194F5282A3B4D0085A5BB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		98C428572829104D000C1C9B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		98EC6EDA283BF03400384D73 /* SaveNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNameView.swift; sourceTree = "<group>"; };
-		98EC6EDD283CC12700384D73 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		98EC6EDA283BF03400384D73 /* SavePersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePersonalInfo.swift; sourceTree = "<group>"; };
+		98EC6EDF283D138C00384D73 /* PersonalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
 		98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridView.swift; sourceTree = "<group>"; };
 		98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
@@ -341,24 +331,19 @@
 			isa = PBXGroup;
 			children = (
 				9818D4E32818EC8200E0CD42 /* ProfileImage.swift */,
-				98EC6EDA283BF03400384D73 /* SaveNameView.swift */,
-				9818D4E52818ECB300E0CD42 /* NameField.swift */,
-				9818D4E72818ECE200E0CD42 /* BirthPicker.swift */,
-				9818D4E92818ED4A00E0CD42 /* BloodTypePicker.swift */,
+				98EC6EDF283D138C00384D73 /* PersonalInfo.swift */,
 				9818D4ED2818EDCE00E0CD42 /* EmergencyContact.swift */,
-				9818D4EF2818EDFA00E0CD42 /* SpareContact.swift */,
 				9818D4EB2818EDA200E0CD42 /* MedicalRecord.swift */,
-				9818D4F2281916C300E0CD42 /* MedicineRecord.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		98EC6EDC283CC0FE00384D73 /* TextView */ = {
+		98EC6EDC283CC0FE00384D73 /* SaveView */ = {
 			isa = PBXGroup;
 			children = (
-				98EC6EDD283CC12700384D73 /* TestView.swift */,
+				98EC6EDA283BF03400384D73 /* SavePersonalInfo.swift */,
 			);
-			path = TextView;
+			path = SaveView;
 			sourceTree = "<group>";
 		};
 		98F4BFC0281AFD1C00FAF0E5 /* SecondView */ = {
@@ -381,7 +366,7 @@
 				980B2F35281FF04C00054AFE /* ThirdView.swift */,
 				98F4BFCE281CE49600FAF0E5 /* ForthView.swift */,
 				98C428572829104D000C1C9B /* Extensions.swift */,
-				98EC6EDC283CC0FE00384D73 /* TextView */,
+				98EC6EDC283CC0FE00384D73 /* SaveView */,
 				9818D4F12818EE8800E0CD42 /* MainView */,
 				98F4BFC0281AFD1C00FAF0E5 /* SecondView */,
 				980B2F34281FEC8900054AFE /* ThirdView */,
@@ -571,38 +556,33 @@
 				9818D4DE28181CE800E0CD42 /* SecondView.swift in Sources */,
 				980B2F38281FF73600054AFE /* RecordingList.swift in Sources */,
 				980B2F2F281EC30C00054AFE /* CameraViewModel.swift in Sources */,
+				98EC6EE0283D138C00384D73 /* PersonalInfo.swift in Sources */,
 				980B2F522826382F00054AFE /* RecordingRow.swift in Sources */,
 				9818D4F928192E1500E0CD42 /* LaunchScreen.swift in Sources */,
 				980B2F33281FEC8300054AFE /* AudioRecorder.swift in Sources */,
 				98F4BFC7281BDA8200FAF0E5 /* CameraPreviewView.swift in Sources */,
 				9818D4CE2817E00400E0CD42 /* EmergencyWidget.intentdefinition in Sources */,
-				9818D4E62818ECB300E0CD42 /* NameField.swift in Sources */,
 				98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */,
 				980B2F5828264DDE00054AFE /* CameraBottomBtn.swift in Sources */,
 				98F658962833787600CC655D /* CameraListRow.swift in Sources */,
 				98F4BFCF281CE49600FAF0E5 /* ForthView.swift in Sources */,
-				98EC6EDB283BF03400384D73 /* SaveNameView.swift in Sources */,
+				98EC6EDB283BF03400384D73 /* SavePersonalInfo.swift in Sources */,
 				9818D4EC2818EDA200E0CD42 /* MedicalRecord.swift in Sources */,
 				98F6588C282D3F3B00CC655D /* ImagePicker.swift in Sources */,
 				9818D4EE2818EDCE00E0CD42 /* EmergencyContact.swift in Sources */,
 				980B2F5628264D1600054AFE /* CameraTopBtn.swift in Sources */,
 				9818D4F528192BDF00E0CD42 /* EmergencyTabview.swift in Sources */,
 				9818D4E42818EC8200E0CD42 /* ProfileImage.swift in Sources */,
-				9818D4F02818EDFA00E0CD42 /* SpareContact.swift in Sources */,
 				98C428582829104D000C1C9B /* Extensions.swift in Sources */,
 				9818D4952817DFA000E0CD42 /* ContentView.swift in Sources */,
 				9818D4D72818103B00E0CD42 /* MainView.swift in Sources */,
-				98EC6EDE283CC12700384D73 /* TestView.swift in Sources */,
-				9818D4EA2818ED4A00E0CD42 /* BloodTypePicker.swift in Sources */,
 				980B2F40282195EA00054AFE /* AudioPlayer.swift in Sources */,
 				98F658922831561700CC655D /* PhotoLibraryView.swift in Sources */,
 				98F4BFD4281E7C0000FAF0E5 /* CameraView.swift in Sources */,
 				980B2F36281FF04C00054AFE /* ThirdView.swift in Sources */,
 				98F4BFD1281E78BF00FAF0E5 /* Camera.swift in Sources */,
-				9818D4F3281916C300E0CD42 /* MedicineRecord.swift in Sources */,
 				980B2F3A2820C53100054AFE /* RecordingData.swift in Sources */,
 				9818D4932817DFA000E0CD42 /* EmergencyAppApp.swift in Sources */,
-				9818D4E82818ECE200E0CD42 /* BirthPicker.swift in Sources */,
 				986194F6282A3B4D0085A5BB /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

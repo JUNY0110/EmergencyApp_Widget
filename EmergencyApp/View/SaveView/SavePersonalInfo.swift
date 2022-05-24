@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SaveNameView: View {
+struct SavePersonalInfo: View {
     
     @Binding var text: String
     @Binding var name: String

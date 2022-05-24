@@ -18,51 +18,23 @@ struct MainView: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 Group {
                     ProfileImage()
-//                        Button(action: {
-//                            NameField(text: $text2, name: $name2)
-//                            print("22")
-//                        }){
-//                            Text("편집")
-//
-//                        }
-//                    }
-                    
-                    SaveNameView(text: $text, name: $name)
-                    
-                    BirthPicker()
-                    Divider()
-                    
-                    BloodTypePicker()
-                    Divider()
-                    
+
+                    PersonalInfo(text: $text, name: $name)
+//                    SavePersonalInfo(text: $text, name: $name)
+
                     EmergencyContact()
-                    //위젯 클릭 시 연락이 가는 번호
-                    Divider()
-                    
-                    SpareContact()
-                    //위젯에 적혀있는 번호
-                    Divider()
-                }
-                
-                Group {
+
                     MedicalRecord()
-                    
-                    Divider()
-                    
-                    MedicineRecord()
                 }
             })
             .onTapGesture {
                 hideKeyboard()
-                
             }
         }
-        NavigationLink(destination: NameField(text: $text, name:$name)){
+        NavigationLink(destination: PersonalInfo(text: $text, name:$name)){
             Text("저장")
         }
 //        NavigationLink(destination: NameField(text: $text2, name: $name2)){Text("편집")
-            
-        
     }
 }
 
