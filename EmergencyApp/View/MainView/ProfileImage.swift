@@ -33,7 +33,7 @@ struct ProfileImage: View {
                             .aspectRatio(contentMode: .fit)
                             .foregroundColor(.gray)
                             .frame(width: 120, height: 120)
-                            .shadow(color: .gray, radius: 3, x: 2, y: 2)
+                            .shadow(color: .gray, radius: 2, x: 1, y: 1)
                         Image(systemName: "plus")
                             .resizable()
                             .aspectRatio(contentMode: .fit)

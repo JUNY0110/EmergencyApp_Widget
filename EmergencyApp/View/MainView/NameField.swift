@@ -9,12 +9,8 @@ import SwiftUI
 
 struct NameField: View {
 
-
-    @State var text: String = UserDefaults.standard.string(forKey: "TEXT_KEY") ?? ""
-    @State var name: String = ""
-
-//    func sayHello(name:String) {
-//    }
+    @Binding var text: String
+    @Binding var name: String
 
     var body: some View {
         
@@ -24,21 +20,17 @@ struct NameField: View {
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                 Spacer()
                 
-            
                 TextField("이름", text: $name)
                     .frame(width: 150, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
                     .submitLabel(.done)
                 
-                    
-//                    Text(text)
-//                        .multilineTextAlignment(.trailing)
-                
-                
                 Button(action: {
+                    
                     UserDefaults.standard.set(name, forKey: "TEXT_KEY")
                     text = name
                     print("dada")
+                    SaveNameView(text: $text, name: $name)
                 }){
                     Text("Save Data")
                 }

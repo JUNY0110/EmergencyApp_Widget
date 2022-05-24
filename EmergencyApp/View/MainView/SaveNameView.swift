@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SaveNameView: View {
     
-    @State var text: String = UserDefaults.standard.string(forKey: "TEXT_KEY") ?? ""
-    @State var name: String = ""
+    @Binding var text: String
+    @Binding var name: String
+
 
     
     var body: some View {
@@ -18,32 +19,23 @@ struct SaveNameView: View {
             HStack{
                 Text("이름")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
+
                 Spacer()
 
-                    
                 Text(text)
                     .frame(width: 150, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
-                
-                Button(action: {
-                    UserDefaults.standard.set(name, forKey: "TEXT_KEY")
-                    text = name
-                    print("dada")
-                }){
-                    Text("Save Data")
-                }
             }
             Divider()
         }
     }
-        
 }
 
-
-
-
-struct SaveNameView_Previews: PreviewProvider {
-    static var previews: some View {
-        SaveNameView()
-    }
-}
+//
+//
+//
+//struct SaveNameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SaveNameView()
+//    }
+//}

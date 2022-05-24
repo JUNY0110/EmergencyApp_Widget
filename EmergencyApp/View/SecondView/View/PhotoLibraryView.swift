@@ -83,7 +83,7 @@ struct PhotoLibraryView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 170, height: 170)
                                 .cornerRadius(10)
-                                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
+                                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
                         }
 
                         }

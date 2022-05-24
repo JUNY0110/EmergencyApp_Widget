@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MainView: View {
 
-
+    @State var text: String = UserDefaults.standard.string(forKey: "TEXT_KEY") ?? ""
+    @State var name: String = ""
     
     var body: some View {
         
@@ -17,8 +18,16 @@ struct MainView: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 Group {
                     ProfileImage()
+//                        Button(action: {
+//                            NameField(text: $text2, name: $name2)
+//                            print("22")
+//                        }){
+//                            Text("편집")
+//
+//                        }
+//                    }
                     
-                    SaveNameView()
+                    SaveNameView(text: $text, name: $name)
                     
                     BirthPicker()
                     Divider()
@@ -48,6 +57,11 @@ struct MainView: View {
                 
             }
         }
+        NavigationLink(destination: NameField(text: $text, name:$name)){
+            Text("저장")
+        }
+//        NavigationLink(destination: NameField(text: $text2, name: $name2)){Text("편집")
+            
         
     }
 }

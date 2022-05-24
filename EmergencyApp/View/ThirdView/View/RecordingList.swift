@@ -28,7 +28,7 @@ struct RecordingList: View {
         }
             .listStyle(GroupedListStyle())
             .colorMultiply(.white)
-            .frame(width: 390, height: 550)
+//            .frame(width: 390, height: 550)
         
         if audioRecorder.recording == false {
             
