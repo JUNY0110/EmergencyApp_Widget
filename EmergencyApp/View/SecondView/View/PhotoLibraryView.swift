@@ -65,6 +65,7 @@ struct PhotoLibraryView: View {
 
         //columns갯수를 정하기 위한 설정
         let medicinePills = pills.pills(into: 2)
+        NavigationView{
         VStack{
      
 //        List {
@@ -128,6 +129,8 @@ struct PhotoLibraryView: View {
                 ImagePicker(selectedImage: $imageSelected, sourceType: self.sourceType)
             }
  
+        }
+        .navigationBarTitle(Text("진단서 및 복용약"), displayMode: .inline)
         }
     }
 }

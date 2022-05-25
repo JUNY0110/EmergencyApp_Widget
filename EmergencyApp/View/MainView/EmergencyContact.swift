@@ -41,9 +41,3 @@ struct EmergencyContact: View {
         
     }
 }
-
-//struct EmergencyContact_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EmergencyContact(emergencyContact: "", spareContact: "")
-//    }
-//}

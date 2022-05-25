@@ -39,9 +39,3 @@ struct SaveContact: View {
         
     }
 }
-
-//struct SaveContact_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SaveContact(emergencyContact: emergencyContact, spareContact: spareContact)
-//    }
-//}

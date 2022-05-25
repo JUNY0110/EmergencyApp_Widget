@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ForthView: View {
+    
     var body: some View {
+        
         VStack {
             Text("위젯만들기 설명하는 페이지, HScroll로 구성. GitGet참고")
         }

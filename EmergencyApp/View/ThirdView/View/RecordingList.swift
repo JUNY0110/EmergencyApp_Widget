@@ -14,60 +14,67 @@ struct RecordingList: View {
     var body: some View {
         
 
-        List{
-            Section(
-                header: Text("\(Date(), formatter: PhotoLibraryView.dateformat)")
-                    .font(.system(size: 25, weight: .bold, design: .rounded))
-            ){
-                ForEach(
-                    audioRecorder.recordings, id: \.createdAt) {recording in
-                    RecordingRow(audioURL: recording.fileURL)
+        NavigationView{
+            List{
+                Section(
+                    header: Text("\(Date(), formatter: PhotoLibraryView.dateformat)")
+                        .font(.system(size: 25, weight: .bold, design: .rounded))
+                ){
+                    ForEach(
+                        audioRecorder.recordings, id: \.createdAt) {recording in
+                        RecordingRow(audioURL: recording.fileURL)
+                    }
+                        .onDelete(perform: delete)
                 }
-                    .onDelete(perform: delete)
             }
+            
+                .listStyle(GroupedListStyle())
+                .colorMultiply(.white)
+    //            .frame(width: 390, height: 550)
+                .navigationBarTitle(Text("진료 및 처방기록"), displayMode: .inline)
         }
-            .listStyle(GroupedListStyle())
-            .colorMultiply(.white)
-//            .frame(width: 390, height: 550)
-        
-        if audioRecorder.recording == false {
             
-            Button(action: {
-            
-                self.audioRecorder.startRecording()
-                print("Start recording")
-            }) {
-                HStack{
-                    Image(systemName: "mic.fill")
-                    Text("음성기록하기")
-                        .font(.system(size: 20, weight: .regular))
+            if audioRecorder.recording == false {
+                
+                Button(action: {
+                
+                    self.audioRecorder.startRecording()
+                    print("Start recording")
+                }) {
+                    HStack{
+                        Image(systemName: "mic.fill")
+                        Text("음성기록하기")
+                            .font(.system(size: 20, weight: .regular))
+                    }
+                    .frame(width: 350, height: 40)
+                    .background(Color.LaunchRed)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .padding(.horizontal)
+                    .padding(.bottom,10)
+                }
+            } else {
+                Button(action: {
+                    self.audioRecorder.stopRecording()
+                    print("Stop Recording")
+                    
+                }){
+                    HStack{
+                        Image(systemName: "stop.circle")
+                        Text("기록저장하기")
+                            .font(.system(size: 20, weight: .regular))
+                    }
                 }
                 .frame(width: 350, height: 40)
-                .background(Color.LaunchRed)
+                .background(Color.blue)
                 .foregroundColor(.white)
                 .cornerRadius(20)
-                .padding(.horizontal)
+    //            .padding(.horizontal)
                 .padding(.bottom,10)
             }
-        } else {
-            Button(action: {
-                self.audioRecorder.stopRecording()
-                print("Stop Recording")
-                
-            }){
-                HStack{
-                    Image(systemName: "stop.circle")
-                    Text("기록저장하기")
-                        .font(.system(size: 20, weight: .regular))
-                }
-            }
-            .frame(width: 350, height: 40)
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(20)
-//            .padding(.horizontal)
-            .padding(.bottom,10)
-        }
+            
+        
+        
     }
     
     

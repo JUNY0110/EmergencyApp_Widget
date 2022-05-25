@@ -13,7 +13,7 @@ struct SaveView: View {
     @Binding var name: String
     @Binding var emergencyContact: String
     @Binding var spareContact: String
-    
+    @State var shouldPopToRootView: Bool = false
     var body: some View {
         
         NavigationView{
@@ -28,19 +28,35 @@ struct SaveView: View {
                 
                 MedicalRecord()
                 })
-            }
-//            .navigationBarHidden(true)
-//            .navigationBarItems(trailing: NavigationLink(destination: MainView(), label: {
-//                Text("저장")
-//            })
-//            )
                 
+            }
+            .navigationBarTitle(Text("기본 정보"), displayMode: .inline)
+            
+            .navigationBarItems(trailing: NavigationLink(destination: MainView(text: $text, name: $name, shouldPopToRootView: self.$shouldPopToRootView), isActive: self.$shouldPopToRootView){
+                Text("편집")
+            }.isDetailLink(false)
+            )
+            
+            
+//            .navigationBarItems(trailing: Button(action: {
+//                MainView()
+//            }){
+//                Text("편집")
+//            })
+//            .toolbar{
+//                ToolbarItem(placement: .navigationBarTrailing){
+//                    Button(action: {
+//                        MainView()
+//                    }){
+//                        Text("편집")
+//                    }
+//
+//                    NavigationLink(destination: MainView()){
+//                        Text("편집")
+//                    }
+//                }
+//            }
         }
+        
     }
 }
-//
-//struct SaveView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SaveView(text: $test, name: <#T##Binding<String>#>, emergencyContact: <#T##Binding<String>#>, spareContact: <#T##Binding<String>#>)
-//    }
-//}

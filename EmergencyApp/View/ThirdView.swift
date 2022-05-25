@@ -9,7 +9,6 @@ import SwiftUI
 
 
 struct ThirdView: View {
-
     
     var body: some View {
 
@@ -18,8 +17,6 @@ struct ThirdView: View {
         }
     }
 }
-
-//
 
 struct ThirdView_Previews: PreviewProvider {
     static var previews: some View {

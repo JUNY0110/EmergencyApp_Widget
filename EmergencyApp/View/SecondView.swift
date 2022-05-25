@@ -9,8 +9,6 @@ import UIKit
 import SwiftUI
 
 struct SecondView: View {
-
-//    @State private var showModal = false
     
     var body: some View {
         

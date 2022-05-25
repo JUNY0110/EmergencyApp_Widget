@@ -49,8 +49,6 @@ struct ProfileImage: View {
                 }
                 .actionSheet(isPresented: $showSheet) {
                     //수정필요: confirmation dialog
-            
-                    
                     ActionSheet(title: Text("사진 앨범"), message: Text("선택하세요."), buttons: [
                         .default(Text("사진 선택")){
                             self.showImagePicker = true
@@ -62,15 +60,12 @@ struct ProfileImage: View {
                             self.sourceType = .camera
                         },
                             .cancel(Text("취소"))
-
                     ])
-            
                 }
                 .fullScreenCover(isPresented: $showImagePicker) {
                     ImagePicker(selectedImage: $imageSelected, sourceType: self.sourceType)
                 }
         }
-        
     }
 }
 
