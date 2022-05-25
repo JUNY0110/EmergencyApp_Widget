@@ -9,8 +9,8 @@ import SwiftUI
 
 struct EmergencyContact: View {
     
-    @State private var emergencyContact: String = ""
-    @State private var spareContact: String = ""
+    @Binding var emergencyContact: String
+    @Binding var spareContact: String
     
     var body: some View {
         VStack{
@@ -19,7 +19,7 @@ struct EmergencyContact: View {
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                 Spacer()
        
-                TextField("000-0000-0000", text: self.$emergencyContact)
+                TextField("000-0000-0000", text: $emergencyContact)
                     .frame(width: 150, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
                     .submitLabel(.done)
@@ -31,7 +31,7 @@ struct EmergencyContact: View {
                 Text("비상연락처2")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                 Spacer()
-                TextField("000-0000-0000", text: self.$spareContact)
+                TextField("000-0000-0000", text: $spareContact)
                     .frame(width: 150, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
                     .keyboardType(.decimalPad)
@@ -42,8 +42,8 @@ struct EmergencyContact: View {
     }
 }
 
-struct EmergencyContact_Previews: PreviewProvider {
-    static var previews: some View {
-        EmergencyContact()
-    }
-}
+//struct EmergencyContact_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EmergencyContact(emergencyContact: "", spareContact: "")
+//    }
+//}

@@ -20,6 +20,8 @@ struct PersonalInfo: View {
     var body: some View {
         
         VStack{
+            
+            //이름TextField
             HStack{
                 Text("이름")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
@@ -29,19 +31,10 @@ struct PersonalInfo: View {
                     .frame(width: 150, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
                     .submitLabel(.done)
-                
-                Button(action: {
-                    
-                    UserDefaults.standard.set(name, forKey: "TEXT_KEY")
-                    text = name
-                    print("dada")
-                    SavePersonalInfo(text: $text, name: $name)
-                }){
-                    Text("Save Data")
-                }
             }
             Divider()
             
+            //생년월일Picker
             HStack{
                 Text("생년월일")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
@@ -56,6 +49,7 @@ struct PersonalInfo: View {
             Divider()
             
 //            abo()
+            //혈액형Picker
             HStack{
                 Text("혈액형")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
@@ -88,8 +82,8 @@ struct PersonalInfo: View {
 //
 //        }
 //    }
-struct NameField_Previews: PreviewProvider {
-    static var previews: some View {
-        NameField()
-    }
-}
+//struct PersonalInfo_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PersonalInfo(text: $text, name: $name)
+//    }
+//}

@@ -11,35 +11,58 @@ struct MainView: View {
 
     @State var text: String = UserDefaults.standard.string(forKey: "TEXT_KEY") ?? ""
     @State var name: String = ""
+
+    @State var emergencyContact: String = ""
+    @State var spareContact: String = ""
+//    @State var wakeUp = UserDefaults.standard.set(Date(), forKey: "CurrentDate")
+
+//    @State var bloodType = UserDefaults.standard.set(["A+","B+","AB+","O+","A-","B-","AB-","O-"], forKey: "ABO")
+//    @State var selectedBloodType = 0
+    
+//    @State var emergencyContact: String = ""
+//    @State var spareContact: String = ""
     
     var body: some View {
         
-        VStack {
-            ScrollView(.vertical, showsIndicators: false, content: {
-                Group {
+        NavigationView{
+            VStack {
+                ScrollView(.vertical, showsIndicators: false, content: {
+
+                    
                     ProfileImage()
-
+                    
+                    
+//                    Button(action: {
+//
+//                        UserDefaults.standard.set(name, forKey: "TEXT_KEY")
+//                        text = name
+//                        SavePersonalInfo(text: $text, name: $name)
+//                    }){
+//                        Text("Save Data")
+//
+//                    }
                     PersonalInfo(text: $text, name: $name)
-//                    SavePersonalInfo(text: $text, name: $name)
-
-                    EmergencyContact()
+                    
+                    EmergencyContact(emergencyContact: $emergencyContact, spareContact: $spareContact)
 
                     MedicalRecord()
+                
+                })
+                .onTapGesture {
+                    hideKeyboard()
                 }
-            })
-            .onTapGesture {
-                hideKeyboard()
             }
+//            .navigationBarItems(trailing: NavigationLink(destination: SaveView(text: $text, name: $name, emergencyContact: $emergencyContact, spareContact: $spareContact), label: {
+//                Text("저장")
+//            })
+//            )
         }
-        NavigationLink(destination: PersonalInfo(text: $text, name:$name)){
-            Text("저장")
-        }
-//        NavigationLink(destination: NameField(text: $text2, name: $name2)){Text("편집")
+        
     }
 }
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}
