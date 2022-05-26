@@ -9,8 +9,8 @@ import SwiftUI
 
 struct EmergencyContact: View {
     
-    @Binding var emergencyContact: String
-    @Binding var spareContact: String
+    @AppStorage("emergencyContact") var emergencyContact: String = ""
+    @AppStorage("spareContact") var spareContact: String = ""
     
     var body: some View {
         VStack{

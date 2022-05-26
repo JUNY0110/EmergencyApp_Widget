@@ -10,7 +10,6 @@ import SwiftUI
 struct ProfileImage: View {
     
     @State var changeProfileImage = false
-//    @State var openCameraRoll = false
     @State var imageSelected = UIImage()
     @State var showSheet = false
     @State var sourceType: UIImagePickerController.SourceType = .camera

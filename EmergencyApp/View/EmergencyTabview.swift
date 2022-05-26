@@ -31,7 +31,7 @@ struct EmergencyTabView: View {
                 
             TabView(){
 
-                SaveView(text1: $text1, text2: $text2, text3: $text3, name: $name, emergencyContact: $emergencyContact, spareContact: $spareContact)
+                MainView()
 
                     .padding(.horizontal, 20)
 
@@ -73,7 +73,6 @@ struct EmergencyTabView: View {
 //                    .navigationBarTitle(selection.rawValue, displayMode: .inline)
             }
 
-//            .navigationBarTitle(selection.rawValue, displayMode: .inline)
             
             
              

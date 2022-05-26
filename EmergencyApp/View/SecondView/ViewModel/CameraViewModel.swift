@@ -37,10 +37,6 @@ class CameraViewModel: ObservableObject {
         isFlashOn.toggle()
     }
 
-//    func switchSilent() {
-//        isSilentModeOn.toggle()
-//    }
-
     func capturePhoto() {
         model.capturePhoto()
         print("[CameraViewModel]: Photo captured!")

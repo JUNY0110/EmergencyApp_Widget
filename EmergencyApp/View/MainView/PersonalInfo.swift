@@ -9,8 +9,7 @@ import SwiftUI
 
 struct PersonalInfo: View {
 
-    @Binding var text: String
-    @Binding var name: String
+    @AppStorage("name") var name = ""
 
     @State private var wakeUp = Date()
 
@@ -27,20 +26,11 @@ struct PersonalInfo: View {
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                 Spacer()
                 
-                TextField("이름", text: $name)
+                TextField("이름을 입력하세요.", text: $name)
                     .frame(width: 150, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
                     .submitLabel(.done)
-                
-//                Button(action: {
-//
-//                    UserDefaults.standard.set(name, forKey: "TEXT_KEY")
-//                    text = name
-//                    print("dada")
-//                    SavePersonalInfo(text: $text, name: $name)
-//                }){
-//                    Text("Save Data")
-//                }
+
             }
             Divider()
             

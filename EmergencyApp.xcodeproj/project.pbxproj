@@ -372,7 +372,6 @@
 				980B2F35281FF04C00054AFE /* ThirdView.swift */,
 				98F4BFCE281CE49600FAF0E5 /* ForthView.swift */,
 				98C428572829104D000C1C9B /* Extensions.swift */,
-				98EC6EDC283CC0FE00384D73 /* SaveView */,
 				9818D4F12818EE8800E0CD42 /* MainView */,
 				98F4BFC0281AFD1C00FAF0E5 /* SecondView */,
 				980B2F34281FEC8900054AFE /* ThirdView */,
@@ -392,6 +391,7 @@
 		98F4BFC5281BCC7B00FAF0E5 /* TestIOnly */ = {
 			isa = PBXGroup;
 			children = (
+				98EC6EDC283CC0FE00384D73 /* SaveView */,
 				9818D4F828192E1500E0CD42 /* LaunchScreen.swift */,
 			);
 			path = TestIOnly;

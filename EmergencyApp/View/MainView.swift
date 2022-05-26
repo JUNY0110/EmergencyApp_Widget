@@ -9,15 +9,6 @@ import SwiftUI
 
 struct MainView: View {
 
-    @Binding var text1: String
-    @Binding var text2: String
-    @Binding var text3: String
-    
-    @Binding var name: String
-    @Binding var emergencyContact: String
-    @Binding var spareContact: String
-    
-    @Binding var shouldPopToRootView: Bool
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     
@@ -40,46 +31,22 @@ struct MainView: View {
                     
                     ProfileImage()
                     
-                    PersonalInfo(text: $text1, name: $name)
+                    PersonalInfo()
                     
-                    EmergencyContact(emergencyContact: $emergencyContact, spareContact: $spareContact)
+                    EmergencyContact()
 
                     MedicalRecord()
                 })
             }
-            .navigationBarItems(leading: btnBack)
-            .toolbar{
-                ToolbarItem(placement: .navigationBarTrailing){
-                    
-                    Button(action: {
-                        UserDefaults.standard.set(name, forKey: "TEXT_KEY")
-                        text1 = name
-                        
-                        UserDefaults.standard.set(emergencyContact, forKey: "TEXT_KEY")
-                        text2 = emergencyContact
-                        
-                        UserDefaults.standard.set(spareContact, forKey: "TEXT_KEY")
-                        text3 = spareContact
-                        
-                        
-//                        SavePersonalInfo(text: $text, name: $name)
-                        self.shouldPopToRootView = false
-                        
-                    }){
-                        Text("저장")
-                    }
-                }
-            }
+            .navigationBarTitle(Text("기본 정보"), displayMode: .inline)
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
         .onTapGesture {
             hideKeyboard()
         }
     }
 }
-//struct MainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainView(text: $text, name: $name)
-//    }
-//}
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
+}
