@@ -9,11 +9,14 @@ import SwiftUI
 
 struct MainView: View {
 
-    @Binding var text: String
+    @Binding var text1: String
+    @Binding var text2: String
+    @Binding var text3: String
+    
     @Binding var name: String
-
-    @State var emergencyContact: String = ""
-    @State var spareContact: String = ""
+    @Binding var emergencyContact: String
+    @Binding var spareContact: String
+    
     @Binding var shouldPopToRootView: Bool
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -37,12 +40,11 @@ struct MainView: View {
                     
                     ProfileImage()
                     
-                    PersonalInfo(text: $text, name: $name)
+                    PersonalInfo(text: $text1, name: $name)
                     
                     EmergencyContact(emergencyContact: $emergencyContact, spareContact: $spareContact)
 
                     MedicalRecord()
-                
                 })
             }
             .navigationBarItems(leading: btnBack)
@@ -51,10 +53,18 @@ struct MainView: View {
                     
                     Button(action: {
                         UserDefaults.standard.set(name, forKey: "TEXT_KEY")
-                        text = name
+                        text1 = name
+                        
+                        UserDefaults.standard.set(emergencyContact, forKey: "TEXT_KEY")
+                        text2 = emergencyContact
+                        
+                        UserDefaults.standard.set(spareContact, forKey: "TEXT_KEY")
+                        text3 = spareContact
+                        
+                        
 //                        SavePersonalInfo(text: $text, name: $name)
                         self.shouldPopToRootView = false
-
+                        
                     }){
                         Text("저장")
                     }

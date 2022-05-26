@@ -31,6 +31,16 @@ struct PersonalInfo: View {
                     .frame(width: 150, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
                     .submitLabel(.done)
+                
+//                Button(action: {
+//
+//                    UserDefaults.standard.set(name, forKey: "TEXT_KEY")
+//                    text = name
+//                    print("dada")
+//                    SavePersonalInfo(text: $text, name: $name)
+//                }){
+//                    Text("Save Data")
+//                }
             }
             Divider()
             

@@ -18,9 +18,11 @@ struct EmergencyTabView: View {
 
 //    @State var selection: Tabs = .info
     
-    @State var text: String = UserDefaults.standard.string(forKey: "TEXT_KEY") ?? ""
-    @State var name: String = ""
+    @State var text1: String = UserDefaults.standard.string(forKey: "TEXT_KEY") ?? ""
+    @State var text2: String = UserDefaults.standard.string(forKey: "EMER_KEY") ?? ""
+    @State var text3: String = UserDefaults.standard.string(forKey: "SPARE_KEY") ?? ""
 
+    @State var name: String = ""
     @State var emergencyContact: String = ""
     @State var spareContact: String = ""
     
@@ -29,7 +31,7 @@ struct EmergencyTabView: View {
                 
             TabView(){
 
-                SaveView(text: $text, name: $name, emergencyContact: $emergencyContact, spareContact: $spareContact)
+                SaveView(text1: $text1, text2: $text2, text3: $text3, name: $name, emergencyContact: $emergencyContact, spareContact: $spareContact)
 
                     .padding(.horizontal, 20)
 
@@ -70,13 +72,7 @@ struct EmergencyTabView: View {
 //                    .tag(Tabs.widget)
 //                    .navigationBarTitle(selection.rawValue, displayMode: .inline)
             }
-//            .toolbar{
-//                ToolbarItem(placement: .navigationBarTrailing){
-//                    NavigationLink(destination: MainView()){
-//                        Text("편집")
-//                    }
-//                }
-//            }
+
 //            .navigationBarTitle(selection.rawValue, displayMode: .inline)
             
             

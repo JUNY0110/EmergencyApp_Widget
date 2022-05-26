@@ -9,11 +9,16 @@ import SwiftUI
 
 struct SaveView: View {
     
-    @Binding var text: String
+    @Binding var text1: String
+    @Binding var text2: String
+    @Binding var text3: String
+    
     @Binding var name: String
     @Binding var emergencyContact: String
     @Binding var spareContact: String
+    
     @State var shouldPopToRootView: Bool = false
+    
     var body: some View {
         
         NavigationView{
@@ -22,40 +27,20 @@ struct SaveView: View {
 
                 ProfileImage()
                 
-                SavePersonalInfo(text: $text, name: $name)
+                SavePersonalInfo(text: $text1, name: $name)
                 
                 SaveContact(emergencyContact: $emergencyContact, spareContact: $spareContact)
                 
                 MedicalRecord()
                 })
-                
             }
             .navigationBarTitle(Text("기본 정보"), displayMode: .inline)
             
-            .navigationBarItems(trailing: NavigationLink(destination: MainView(text: $text, name: $name, shouldPopToRootView: self.$shouldPopToRootView), isActive: self.$shouldPopToRootView){
+            .navigationBarItems(trailing: NavigationLink(destination: MainView(text1: $text1, text2: $text2, text3: $text3, name: $name, emergencyContact: $emergencyContact, spareContact: $spareContact, shouldPopToRootView: self.$shouldPopToRootView), isActive: self.$shouldPopToRootView){
                 Text("편집")
-            }.isDetailLink(false)
+            }
+//                .isDetailLink(false)
             )
-            
-            
-//            .navigationBarItems(trailing: Button(action: {
-//                MainView()
-//            }){
-//                Text("편집")
-//            })
-//            .toolbar{
-//                ToolbarItem(placement: .navigationBarTrailing){
-//                    Button(action: {
-//                        MainView()
-//                    }){
-//                        Text("편집")
-//                    }
-//
-//                    NavigationLink(destination: MainView()){
-//                        Text("편집")
-//                    }
-//                }
-//            }
         }
         
     }
