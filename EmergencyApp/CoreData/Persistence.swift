@@ -15,7 +15,7 @@ struct PersistenceController {
         let viewContext = result.container.viewContext
         for item in 0..<10 {
             let newInfo = PersonalInfoEntity(context: viewContext)
-            newInfo.entity.name = "Eddy"
+            newInfo.name = "Eddy"
         }
         do {
             try viewContext.save()

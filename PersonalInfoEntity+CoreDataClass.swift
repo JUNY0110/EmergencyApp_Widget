@@ -6,10 +6,10 @@
 //
 //
 
-import Foundation
-import CoreData
-
-@objc(PersonalInfoEntity)
-public class PersonalInfoEntity: NSManagedObject {
-
-}
+//import Foundation
+//import CoreData
+//
+//@objc(PersonalInfoEntity)
+//public class PersonalInfoEntity: NSManagedObject {
+//
+//}
