@@ -16,6 +16,9 @@ import SwiftUI
 
 struct EmergencyTabView: View {
 
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: PersonalInfoEntity, sortDescriptors: []) var PersonalInfoData: FetchedResults<PersonalInfoEntity>
+    
 //    @State var selection: Tabs = .info
     
     @State var text1: String = UserDefaults.standard.string(forKey: "TEXT_KEY") ?? ""

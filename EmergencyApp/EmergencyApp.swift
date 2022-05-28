@@ -8,11 +8,17 @@
 import SwiftUI
 
 @main
-struct EmergencyAppApp: App {
+struct EmergencyApp: App {
+    
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             EmergencyTabView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+
         }
     }
 }
+
+
