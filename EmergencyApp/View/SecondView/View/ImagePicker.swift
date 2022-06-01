@@ -12,7 +12,9 @@ import PhotosUI
 struct ImagePicker: UIViewControllerRepresentable {
 
     
-    @Binding var selectedImage: UIImage
+    @Binding var selectedImage: Data
+//    @Binding var show: Bool
+
     @Environment(\.presentationMode) private var presentationMode
     var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
@@ -29,28 +31,32 @@ struct ImagePicker: UIViewControllerRepresentable {
         
         return imagePicker
     }
+    
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
         
     }
     
-    final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-        var parent: ImagePicker
-        
-        init(_ parent: ImagePicker) {
-            self.parent = parent
+    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        let img0: ImagePicker
+        init(img1: ImagePicker) {
+            img0 = img1
+        }
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//            self.img0.show.toggle()
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                parent.selectedImage = image
-            }
-            parent.presentationMode.wrappedValue.dismiss()
-        }
+            let image = info[.originalImage] as! UIImage
 
+            let data = image.jpegData(compressionQuality: 0.5)
+            self.img0.selectedImage = data!
+//            self.img0.show.toggle()
+            
+        }
     }
     func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-        
+        return ImagePicker.Coordinator(img1: self)
+
     }
 //
 //    func didTapButton() {

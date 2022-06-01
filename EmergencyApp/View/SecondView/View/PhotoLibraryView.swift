@@ -32,7 +32,7 @@ struct PhotoLibraryView: View {
 //    @State private var showModal = false
 //    @State var shouldShowImagePicker = false
     @State var showImagePicker = false
-    @State var imageSelected = UIImage()
+    @State var imageSelected : Data = .init(count: 0)
     @State var showSheet = false
     @State var sourceType: UIImagePickerController.SourceType = .camera
     

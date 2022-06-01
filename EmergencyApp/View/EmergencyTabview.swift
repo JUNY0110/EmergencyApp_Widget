@@ -17,14 +17,17 @@ import SwiftUI
 struct EmergencyTabView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: PersonalInfoEntity, sortDescriptors: []) var PersonalInfoData: FetchedResults<PersonalInfoEntity>
-    
-//    @State var selection: Tabs = .info
-    
-    @State var text1: String = UserDefaults.standard.string(forKey: "TEXT_KEY") ?? ""
-    @State var text2: String = UserDefaults.standard.string(forKey: "EMER_KEY") ?? ""
-    @State var text3: String = UserDefaults.standard.string(forKey: "SPARE_KEY") ?? ""
 
+    @FetchRequest(entity: PersonalInfoEntity.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.name, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.birth, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.bloodType, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.emergencyContact, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.spareContact, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.photoImage, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.medicalRecord, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.medicineRecord, ascending: false)]) var personalInfo: FetchedResults<PersonalInfoEntity>
+        
     @State var name: String = ""
     @State var emergencyContact: String = ""
     @State var spareContact: String = ""
@@ -37,24 +40,18 @@ struct EmergencyTabView: View {
                 MainView()
 
                     .padding(.horizontal, 20)
-
                     .tabItem{
                         Image(systemName: "house")
                         Text("의료정보")
                         
                     }
-//                    .tag(Tabs.info)
-//                    .navigationBarTitle(selection.rawValue, displayMode: .inline)
                
                 SecondView()
                     .padding(.horizontal, 20)
-
                     .tabItem{
                         Image(systemName: "pills.fill")
                         Text("사진")
                     }
-//                    .tag(Tabs.photo)
-//                    .navigationBarTitle(selection.rawValue, displayMode: .inline)
 
                 
                 ThirdView()
@@ -62,24 +59,14 @@ struct EmergencyTabView: View {
                         Image(systemName: "waveform")
                         Text("녹음")
                     }
-//                    .tag(Tabs.record)
-//                    .navigationBarTitle(selection.rawValue, displayMode: .inline)
                     
                 
                 ForthView()
                     .padding(.horizontal, 20)
-
                     .tabItem{
                         Text("위젯")
                     }
-//                    .tag(Tabs.widget)
-//                    .navigationBarTitle(selection.rawValue, displayMode: .inline)
             }
-
-            
-            
-             
-        
     }
 }
 

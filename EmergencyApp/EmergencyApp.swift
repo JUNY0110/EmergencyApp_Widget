@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct EmergencyApp: App {
+struct EmergencyAppApp: App {
     
     let persistenceController = PersistenceController.shared
 

@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ProfileImage: View {
     
+    @Environment(\.managedObjectContext) var viewContext
+    @Environment(\.presentationMode) var dismiss
+
     @State var changeProfileImage = false
-    @State var imageSelected = UIImage()
+    @State var imageSelected : Data = .init(count: 0)
     @State var showSheet = false
     @State var sourceType: UIImagePickerController.SourceType = .camera
     @State var showImagePicker = false
@@ -20,8 +23,17 @@ struct ProfileImage: View {
 
         ZStack{
             
+            if self.imageSelected.count != 0 {
+                Button(action: {
+                    self.showImagePicker.toggle()
+                }) {
+                    Image(uiImage: UIImage(data: self.imageSelected)!)
+                }
+            }
+
+            
             Button(action: {
-                    
+                
                     self.showSheet = true
                     changeProfileImage = true
                     
@@ -39,13 +51,14 @@ struct ProfileImage: View {
                             .frame(width: 30, height: 30)
                             .foregroundColor(.gray)
                             .clipShape(Circle())
-                        Image(uiImage: imageSelected)
+                        Image(uiImage: UIImage(data: imageSelected)!)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 120, height: 120)
                             .clipShape(Circle())
                     }
                 }
+                
                 .actionSheet(isPresented: $showSheet) {
                     //수정필요: confirmation dialog
                     ActionSheet(title: Text("사진 앨범"), message: Text("선택하세요."), buttons: [
@@ -61,6 +74,7 @@ struct ProfileImage: View {
                             .cancel(Text("취소"))
                     ])
                 }
+                
                 .fullScreenCover(isPresented: $showImagePicker) {
                     ImagePicker(selectedImage: $imageSelected, sourceType: self.sourceType)
                 }

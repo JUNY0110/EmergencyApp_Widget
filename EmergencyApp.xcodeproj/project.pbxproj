@@ -16,6 +16,8 @@
 		980B2F522826382F00054AFE /* RecordingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F512826382F00054AFE /* RecordingRow.swift */; };
 		980B2F5628264D1600054AFE /* CameraTopBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F5528264D1600054AFE /* CameraTopBtn.swift */; };
 		980B2F5828264DDE00054AFE /* CameraBottomBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B2F5728264DDE00054AFE /* CameraBottomBtn.swift */; };
+		980E3B40284713EC0098FD68 /* PersonalInfoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980E3B3F284713EC0098FD68 /* PersonalInfoEntity+CoreDataProperties.swift */; };
+		980E3B42284716160098FD68 /* PersonalInfoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980E3B41284716160098FD68 /* PersonalInfoEntity+CoreDataClass.swift */; };
 		9818D4932817DFA000E0CD42 /* EmergencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4922817DFA000E0CD42 /* EmergencyApp.swift */; };
 		9818D4952817DFA000E0CD42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818D4942817DFA000E0CD42 /* ContentView.swift */; };
 		9818D4972817DFA200E0CD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9818D4962817DFA200E0CD42 /* Assets.xcassets */; };
@@ -45,7 +47,6 @@
 		98EC6EE6283D3D5A00384D73 /* SaveContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6EE5283D3D5A00384D73 /* SaveContact.swift */; };
 		98EC6EE8283D3F8500384D73 /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6EE7283D3F8500384D73 /* SaveView.swift */; };
 		98EC6EED283FD06A00384D73 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6EEB283FD06A00384D73 /* Model.xcdatamodeld */; };
-		98EC6EF5283FDAC300384D73 /* PersonalInfoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6EF3283FDAC300384D73 /* PersonalInfoEntity+CoreDataClass.swift */; };
 		98EC6F70284252F400384D73 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6F6F284252F400384D73 /* Persistence.swift */; };
 		98F4BFBF281AFC7B00FAF0E5 /* LazyVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */; };
 		98F4BFC7281BDA8200FAF0E5 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F4BFC6281BDA8200FAF0E5 /* CameraPreviewView.swift */; };
@@ -103,10 +104,11 @@
 		980B2F392820C53100054AFE /* RecordingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingData.swift; sourceTree = "<group>"; };
 		980B2F3F282195E900054AFE /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		980B2F4728239E2500054AFE /* EmergencyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmergencyApp.entitlements; sourceTree = "<group>"; };
-		980B2F482823B7D500054AFE /* EmergencyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmergencyWidgetExtension.entitlements; sourceTree = "<group>"; };
 		980B2F512826382F00054AFE /* RecordingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingRow.swift; sourceTree = "<group>"; };
 		980B2F5528264D1600054AFE /* CameraTopBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTopBtn.swift; sourceTree = "<group>"; };
 		980B2F5728264DDE00054AFE /* CameraBottomBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBottomBtn.swift; sourceTree = "<group>"; };
+		980E3B3F284713EC0098FD68 /* PersonalInfoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalInfoEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		980E3B41284716160098FD68 /* PersonalInfoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalInfoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9818D48F2817DFA000E0CD42 /* EmergencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9818D4922817DFA000E0CD42 /* EmergencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyApp.swift; sourceTree = "<group>"; };
 		9818D4942817DFA000E0CD42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,7 +142,6 @@
 		98EC6EE5283D3D5A00384D73 /* SaveContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveContact.swift; sourceTree = "<group>"; };
 		98EC6EE7283D3F8500384D73 /* SaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
 		98EC6EEC283FD06A00384D73 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		98EC6EF3283FDAC300384D73 /* PersonalInfoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalInfoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		98EC6F6F284252F400384D73 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		98F4BFBC281AFB6600FAF0E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		98F4BFBE281AFC7B00FAF0E5 /* LazyVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridView.swift; sourceTree = "<group>"; };
@@ -256,8 +257,6 @@
 		9818D4862817DFA000E0CD42 = {
 			isa = PBXGroup;
 			children = (
-				98EC6EF3283FDAC300384D73 /* PersonalInfoEntity+CoreDataClass.swift */,
-				980B2F482823B7D500054AFE /* EmergencyWidgetExtension.entitlements */,
 				9818D4912817DFA000E0CD42 /* EmergencyApp */,
 				9818D4A22817DFA200E0CD42 /* EmergencyAppTests */,
 				9818D4AC2817DFA200E0CD42 /* EmergencyAppUITests */,
@@ -281,6 +280,8 @@
 		9818D4912817DFA000E0CD42 /* EmergencyApp */ = {
 			isa = PBXGroup;
 			children = (
+				980E3B41284716160098FD68 /* PersonalInfoEntity+CoreDataClass.swift */,
+				980E3B3F284713EC0098FD68 /* PersonalInfoEntity+CoreDataProperties.swift */,
 				980B2F4728239E2500054AFE /* EmergencyApp.entitlements */,
 				9818D4FA2819A2AF00E0CD42 /* Info.plist */,
 				9818D4922817DFA000E0CD42 /* EmergencyApp.swift */,
@@ -342,6 +343,7 @@
 		9818D4F12818EE8800E0CD42 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				9818D4D62818103B00E0CD42 /* MainView.swift */,
 				9818D4E32818EC8200E0CD42 /* ProfileImage.swift */,
 				98EC6EDF283D138C00384D73 /* PersonalInfo.swift */,
 				9818D4ED2818EDCE00E0CD42 /* EmergencyContact.swift */,
@@ -384,11 +386,11 @@
 			children = (
 				9818D4FB2819A49700E0CD42 /* LaunchScreen2.storyboard */,
 				9818D4F428192BDF00E0CD42 /* EmergencyTabview.swift */,
-				9818D4D62818103B00E0CD42 /* MainView.swift */,
 				9818D4DD28181CE800E0CD42 /* SecondView.swift */,
 				980B2F35281FF04C00054AFE /* ThirdView.swift */,
 				98F4BFCE281CE49600FAF0E5 /* ForthView.swift */,
 				98C428572829104D000C1C9B /* Extensions.swift */,
+				98EC6EDC283CC0FE00384D73 /* SaveView */,
 				9818D4F12818EE8800E0CD42 /* MainView */,
 				98F4BFC0281AFD1C00FAF0E5 /* SecondView */,
 				980B2F34281FEC8900054AFE /* ThirdView */,
@@ -408,7 +410,6 @@
 		98F4BFC5281BCC7B00FAF0E5 /* TestIOnly */ = {
 			isa = PBXGroup;
 			children = (
-				98EC6EDC283CC0FE00384D73 /* SaveView */,
 				9818D4F828192E1500E0CD42 /* LaunchScreen.swift */,
 			);
 			path = TestIOnly;
@@ -606,11 +607,12 @@
 				98EC6EE8283D3F8500384D73 /* SaveView.swift in Sources */,
 				98F4BFD4281E7C0000FAF0E5 /* CameraView.swift in Sources */,
 				980B2F36281FF04C00054AFE /* ThirdView.swift in Sources */,
+				980E3B40284713EC0098FD68 /* PersonalInfoEntity+CoreDataProperties.swift in Sources */,
 				98F4BFD1281E78BF00FAF0E5 /* Camera.swift in Sources */,
+				980E3B42284716160098FD68 /* PersonalInfoEntity+CoreDataClass.swift in Sources */,
 				980B2F3A2820C53100054AFE /* RecordingData.swift in Sources */,
 				9818D4932817DFA000E0CD42 /* EmergencyApp.swift in Sources */,
 				98EC6F70284252F400384D73 /* Persistence.swift in Sources */,
-				98EC6EF5283FDAC300384D73 /* PersonalInfoEntity+CoreDataClass.swift in Sources */,
 				986194F6282A3B4D0085A5BB /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,12 @@ import SwiftUI
 
 struct PersonalInfo: View {
 
-    @AppStorage("name") var name = ""
+//    @AppStorage("name") var name = ""
+    
+//    @FetchRequest(entity: PersonalInfoEntity.entity(), sortDescriptors: []) var name: FetchedResults<PersonalInfoEntity>
+    @Binding var textFieldName: String
+//    @FetchRequest(entity: PersonalInfoEntity.entity(), sortDescriptors: []) var emergencyContact: FetchedResults<PersonalInfoEntity>
+//    @FetchRequest(entity: PersonalInfoEntity.entity(), sortDescriptors: []) var spareContact: FetchedResults<PersonalInfoEntity>
 
     @State private var wakeUp = Date()
 
@@ -26,7 +31,7 @@ struct PersonalInfo: View {
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                 Spacer()
                 
-                TextField("이름을 입력하세요.", text: $name)
+                TextField("이름을 입력하세요.", text: $textFieldName)
                     .frame(width: 150, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
                     .submitLabel(.done)

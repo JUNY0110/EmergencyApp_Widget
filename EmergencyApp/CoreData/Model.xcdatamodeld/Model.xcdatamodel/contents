@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="PersonalInfoEntity" representedClassName="PersonalInfoEntity" syncable="YES" codeGenerationType="class">
+    <entity name="PersonalInfoEntity" representedClassName="PersonalInfoEntity" syncable="YES">
+        <attribute name="birth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="bloodType" optional="YES" attributeType="String"/>
         <attribute name="emergencyContact" optional="YES" attributeType="String"/>
+        <attribute name="medicalRecord" optional="YES" attributeType="String"/>
+        <attribute name="medicineRecord" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="photoImage" optional="YES" attributeType="Binary"/>
         <attribute name="spareContact" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="PersonalInfoEntity" positionX="77.625" positionY="-502.4765625" width="128" height="88"/>
+        <element name="PersonalInfoEntity" positionX="77.625" positionY="-502.4765625" width="128" height="149"/>
     </elements>
 </model>
